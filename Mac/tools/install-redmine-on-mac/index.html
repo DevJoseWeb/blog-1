@@ -14,7 +14,7 @@
 <meta property="og:description" content="1. Install Brew &amp;amp; Git12345# Brew/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot; # Gitbrew install git
 2. Install and Setup MySQL (5.7.">
 <meta property="og:image" content="https://zlargon.github.io/blog/blog/Mac/tools/install-redmine-on-mac/redmine.png">
-<meta property="og:updated_time" content="2017-10-11T02:13:28.686Z">
+<meta property="og:updated_time" content="2017-10-12T01:31:06.295Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Install Redmine on Mac">
 <meta name="twitter:description" content="1. Install Brew &amp;amp; Git12345# Brew/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot; # Gitbrew install git
@@ -258,7 +258,7 @@ ga('send', 'pageview');
 <h2 id="4-Run-Bundle"><a href="#4-Run-Bundle" class="headerlink" title="4. Run Bundle"></a>4. Run Bundle</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo gem install bundler</div><div class="line"> </div><div class="line"><span class="comment"># execute under redmine's folder</span></div><div class="line">bundle install --without development <span class="built_in">test</span></div><div class="line">bundle <span class="built_in">exec</span> rake generate_secret_token</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake db:migrate</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake redmine:load_default_data</div></pre></td></tr></table></figure>
 <h3 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting:"></a>Trouble Shooting:</h3><p>An error occurred while installing mysql2 (0.4.9), and Bundler cannot continue.<br>Make sure that <code>gem install mysql2 -v &#39;0.4.9&#39;</code> succeeds before bundling.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
-<h2 id="5-Start-Redmine"><a href="#5-Start-Redmine" class="headerlink" title="5. Start Redmine"></a>5. Start Redmine</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># set port 5432</span></div><div class="line">bundle <span class="built_in">exec</span> rails server webrick <span class="_">-e</span> production -p 5432</div></pre></td></tr></table></figure>
+<h2 id="5-Start-Redmine"><a href="#5-Start-Redmine" class="headerlink" title="5. Start Redmine"></a>5. Start Redmine</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysql.server restart</div><div class="line">bundle <span class="built_in">exec</span> rails server webrick <span class="_">-e</span> production -p 5432  <span class="comment"># port 5432</span></div></pre></td></tr></table></figure>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
 <li><a href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank" rel="external">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a></li>
 <li><a href="http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer" target="_blank" rel="external">http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer</a></li>
@@ -273,7 +273,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/Mac/tools/install-redmine-on-mac/" data-id="cj8mevg9l0007kvon8nw678io" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/Mac/tools/install-redmine-on-mac/" data-id="cj8nsgj2f000191on32h6bh45" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
