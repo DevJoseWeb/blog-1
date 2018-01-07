@@ -236,7 +236,7 @@ ga('send', 'pageview');
         
             
             <img src="/blog/MAC/tools/install-redmine-on-mac/redmine.png" alt="redmine" title="redmine">
-<h2 id="1-Install-Brew-amp-Git"><a href="#1-Install-Brew-amp-Git" class="headerlink" title="1. Install Brew &amp; Git"></a>1. Install Brew &amp; Git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Brew</div><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div><div class="line"></div><div class="line"># Git</div><div class="line">brew install git</div></pre></td></tr></table></figure>
+<h2 id="1-Install-Brew-amp-Git"><a href="#1-Install-Brew-amp-Git" class="headerlink" title="1. Install Brew &amp; Git"></a>1. Install Brew &amp; Git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Brew</div><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div><div class="line"> </div><div class="line"># Git</div><div class="line">brew install git</div></pre></td></tr></table></figure>
 <h2 id="2-Install-and-Setup-MySQL-5-7-19"><a href="#2-Install-and-Setup-MySQL-5-7-19" class="headerlink" title="2. Install and Setup MySQL (5.7.19)"></a>2. Install and Setup MySQL (5.7.19)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mysql</div></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysqladmin -u root password &#123;yourpassword&#125;</div><div class="line">mysql -u root -p     <span class="comment"># login MySQL with password</span></div></pre></td></tr></table></figure>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> redmine <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'redmine'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'my_password'</span>;</div><div class="line"><span class="keyword">GRANT</span> ALL <span class="keyword">PRIVILEGES</span> <span class="keyword">ON</span> redmine.* <span class="keyword">TO</span> <span class="string">'redmine'</span>@<span class="string">'localhost'</span>;</div></pre></td></tr></table></figure>
@@ -247,7 +247,7 @@ ga('send', 'pageview');
 </li>
 </ul>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">production:</span></div><div class="line"><span class="attr">  adapter:</span> mysql2</div><div class="line"><span class="attr">  database:</span> redmine</div><div class="line"><span class="attr">  host:</span> localhost</div><div class="line"><span class="attr">  port:</span> <span class="number">3307</span></div><div class="line"><span class="attr">  username:</span> root</div><div class="line"><span class="attr">  password:</span> &#123;yourpassword&#125;</div><div class="line"><span class="attr">  encoding:</span> utf8</div></pre></td></tr></table></figure>
-<h2 id="4-Run-Bundle"><a href="#4-Run-Bundle" class="headerlink" title="4. Run Bundle"></a>4. Run Bundle</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo gem install bundler</div><div class="line"></div><div class="line"><span class="comment"># execute under redmine's folder</span></div><div class="line">bundle install --without development <span class="built_in">test</span></div><div class="line">bundle <span class="built_in">exec</span> rake generate_secret_token</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake db:migrate</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake redmine:load_default_data</div></pre></td></tr></table></figure>
+<h2 id="4-Run-Bundle"><a href="#4-Run-Bundle" class="headerlink" title="4. Run Bundle"></a>4. Run Bundle</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo gem install bundler</div><div class="line"> </div><div class="line"><span class="comment"># execute under redmine's folder</span></div><div class="line">bundle install --without development <span class="built_in">test</span></div><div class="line">bundle <span class="built_in">exec</span> rake generate_secret_token</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake db:migrate</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake redmine:load_default_data</div></pre></td></tr></table></figure>
 <h3 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting:"></a>Trouble Shooting:</h3><p>An error occurred while installing mysql2 (0.4.9), and Bundler cannot continue.<br>Make sure that <code>gem install mysql2 -v &#39;0.4.9&#39;</code> succeeds before bundling.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
 <h2 id="5-Start-Redmine"><a href="#5-Start-Redmine" class="headerlink" title="5. Start Redmine"></a>5. Start Redmine</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysql.server restart</div><div class="line">bundle <span class="built_in">exec</span> rails server webrick <span class="_">-e</span> production -p 5432  <span class="comment"># port 5432</span></div></pre></td></tr></table></figure>
@@ -265,7 +265,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/install-redmine-on-mac/" data-id="cjc5e2ym20009jsonzzx4zxth" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/install-redmine-on-mac/" data-id="cjc5e8dux0008kwonxkv0z0e4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -410,7 +410,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/mac-camera-not-works/" data-id="cjc5e2yma000hjson7hj78452" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/mac-camera-not-works/" data-id="cjc5e8dv4000fkwonjtqjxq4a" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -691,7 +691,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/TOEFL/how-to-memorize-vocabulary/" data-id="cjc5e2yls0002json2zk1bfqn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/TOEFL/how-to-memorize-vocabulary/" data-id="cjc5e8dus0006kwongnlhdf1e" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1021,7 +1021,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/TOEFL/toefl-listening-plus-questions/" data-id="cjc5e2ymo0017jsondwm59uoe" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/TOEFL/toefl-listening-plus-questions/" data-id="cjc5e8dvj0017kwonumi2yliy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1211,7 +1211,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/record-both-system-audio-and-mic-input/" data-id="cjc5e2ymk000vjsonrj432va9" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/record-both-system-audio-and-mic-input/" data-id="cjc5e8dvg000ukwontn291rlg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1352,7 +1352,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/" data-id="cjc5e2ymm0011jsonjnjscof4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/" data-id="cjc5e8dvi0011kwonc3edyjzk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
