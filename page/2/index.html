@@ -159,7 +159,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                19
+                18
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -194,147 +194,6 @@ ga('send', 'pageview');
 
             
             <section id="main">
-    <article id="post-selection-box-of-chinese-input-method-is-missing" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">中文輸入法選字框 無法顯示</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">
-            <time datetime="2016-06-24T13:07:10.000Z" itemprop="datePublished">2016-06-24</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/others/">others</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/blog/tags/中文輸入法/">中文輸入法</a>
-    </div>
-
-                </div>
-            </header>
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <img src="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/osx_logo.jpg" alt="OS X" title="OS X">
-<p>自從我的 MAC OSX 升級到 10.11 之後，就常常會遇到中文輸入法選字框消失的情形<br>只能靠重開機來修復，還滿煩的</p>
-<p>我後來有拍影片傳到 Youtube，也有在 Apple 社群發問，終於遇到好心人回覆了<br>ya~ 終於不用再一直重開機了 ^0^</p>
-<h2 id="解決方案"><a href="#解決方案" class="headerlink" title="解決方案"></a>解決方案</h2><p>在終端機輸入 <code>killall TCIM</code></p>
-<img src="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/TCIM.png" alt="TCIM" title="TCIM">
-<p>這個指令把背景執行的<code>TCIM</code>（中文輸入法）的程序關掉<br>當作業系統發現 <code>TCIM</code> 不見之後，就會強迫重新啟動 <code>TCIM</code>，這時候選字框就回來了</p>
-<h2 id="影片連結"><a href="#影片連結" class="headerlink" title="影片連結"></a>影片連結</h2><div class="video-container"><iframe src="//www.youtube.com/embed/m_f44XGfDXw" frameborder="0" allowfullscreen></iframe></div>
-<p><br></p>
-<h2 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h2><ul>
-<li><a href="http://blog.tenyi.com/2015/10/mac-os-x-ei-capitan.html" target="_blank" rel="external">http://blog.tenyi.com/2015/10/mac-os-x-ei-capitan.html</a></li>
-<li><a href="https://discussionschinese.apple.com/thread/73381" target="_blank" rel="external">https://discussionschinese.apple.com/thread/73381</a></li>
-</ul>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/" data-id="cjc5e2ah70012j4onu71s35x5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <article id="post-stop-android-file-transfer-auto-starting" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -421,7 +280,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/stop-android-file-transfer-auto-starting/" data-id="cjc5e2ah70015j4onump0a6p5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/stop-android-file-transfer-auto-starting/" data-id="cjc5e2ymn0014jsonv9yjohkg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -845,7 +704,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/misc/naming-of-planets-and-days/" data-id="cjc5e2ah3000oj4onkwh07ivn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/misc/naming-of-planets-and-days/" data-id="cjc5e2ymh000pjson8g2nybzu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -995,7 +854,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/chrome-cannot-upgrade-automatically/" data-id="cjc5e2agg0004j4onp7lx78ts" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/chrome-cannot-upgrade-automatically/" data-id="cjc5e2ylw0006jsonzqsupn22" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1153,7 +1012,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/iOS/others/ios-undeletable-photos/" data-id="cjc5e2agr000cj4on249z47pr" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/iOS/others/ios-undeletable-photos/" data-id="cjc5e2ym4000cjsonf7tif3iv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1299,7 +1158,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/avoid-launch-iphoto-and-itune/" data-id="cjc5e2age0003j4onfki4m2v5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/avoid-launch-iphoto-and-itune/" data-id="cjc5e2ylp0000jsonmm46ib0o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1377,8 +1236,277 @@ ga('send', 'pageview');
 
 
 
+    <article id="post-mac-development-tools" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/blog/MAC/tools/mac-development-tools/">推薦的開發工具</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/MAC/tools/mac-development-tools/">
+            <time datetime="2015-10-06T16:35:21.000Z" itemprop="datePublished">2015-10-06</time>
+        </a>
+    </div>
+
+
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a>
+    </div>
+
+                    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/blog/tags/SublimeText/">SublimeText</a>, <a class="tag-link" href="/blog/tags/TextWrangler/">TextWrangler</a>, <a class="tag-link" href="/blog/tags/Xcode/">Xcode</a>, <a class="tag-link" href="/blog/tags/brew/">brew</a>, <a class="tag-link" href="/blog/tags/git/">git</a>, <a class="tag-link" href="/blog/tags/iTerm2/">iTerm2</a>, <a class="tag-link" href="/blog/tags/repo/">repo</a>
+    </div>
+
+                </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>由於我之前工作都是用 Mac 在做軟體開發，後來有滿多同事看我用得很順手</p>
+<p>後來都想買 Mac 來用看看 XD</p>
+<p>我個人非常推薦用 Mac 進行軟體開發工作</p>
+<p>像是我之前常常會跑台北參加各種開發者 Conference</p>
+<p>不論是演講者或是底下的開發者們，幾乎是人手一台 Mac</p>
+<p>Mac 的穩定性實在是令人非常驚豔，我覺得工作上沒什麼比穩定性還要更重要的了！</p>
+<p>這篇主要是寫給初次在 Mac 進行開發的人看的</p>
+<p>主要介紹是一些推薦的開發套件，以及一些提醒事項</p>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>應用程式</th>
+<th>簡介</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Xcode</td>
+<td>開發 <code>Mac OSX</code>、<code>iOS App</code> 專用 IDE</td>
+</tr>
+<tr>
+<td>iTerm2</td>
+<td>神器等級的終端機</td>
+</tr>
+<tr>
+<td>brew</td>
+<td>安裝其他 <code>command line</code>，類似 <code>Ubuntu</code> 的 <code>apt-get</code></td>
+</tr>
+<tr>
+<td>git</td>
+<td>版本控制軟體</td>
+</tr>
+<tr>
+<td>repo</td>
+<td>版本控制軟體</td>
+</tr>
+<tr>
+<td>Sublime Text</td>
+<td>神器等級的文字編輯器</td>
+</tr>
+<tr>
+<td>TextWrangler</td>
+<td>很方便搜尋關鍵字的文字編輯器</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<img src="/blog/MAC/tools/mac-development-tools/xcode.png" alt="Xcode" title="Xcode">
+<h1 id="1-安裝-Xcode"><a href="#1-安裝-Xcode" class="headerlink" title="1. 安裝 Xcode"></a>1. 安裝 Xcode</h1><p>建議從 Mac App Store 下載：<a href="https://itunes.apple.com/tw/app/xcode/id497799835?l=zh&amp;mt=12" target="_blank" rel="external">https://itunes.apple.com/tw/app/xcode/id497799835?l=zh&amp;mt=12</a></p>
+<p>Xcode 是開發者必裝的軟體，包含了 IDE, <code>Command Line Tools</code>, <code>Clang Compiler</code>, …</p>
+<p>其實如果不想要 IDE 的話，也是可以直接到 Apple 開發者中心，直接下載 <code>Command Line Tools</code></p>
+<p>不過這裡是建議直接下載 Xcode，後續透過 Mac App Store 更新會比較方便</p>
+<p><br></p>
+<img src="/blog/MAC/tools/mac-development-tools/iterm2.png" alt="iTerm 2" title="iTerm 2">
+<h1 id="2-安裝-iTerm-2（★★★★★★）"><a href="#2-安裝-iTerm-2（★★★★★★）" class="headerlink" title="2. 安裝 iTerm 2（★★★★★★）"></a>2. 安裝 iTerm 2（★★★★★★）</h1><p>Mac 神器等級的終端機</p>
+<p>請參考這篇：<a href="http://zlargon.github.io/blog/MAC/tools/mac-terminal/">終端機 iTerm2 及設定 bash_profile</a></p>
+<p>內有圖文並茂的設定教學</p>
+<p><br></p>
+<h1 id="3-安裝-Home-Brew"><a href="#3-安裝-Home-Brew" class="headerlink" title="3. 安裝 Home Brew"></a>3. 安裝 Home Brew</h1><p>官方網站：<a href="http://brew.sh/" target="_blank" rel="external">http://brew.sh/</a></p>
+<p><code>brew</code> 的功能等同於 Ubuntu 上的 <code>apt-get</code></p>
+<p>在 <code>brew</code> 出現以前有 <code>MacPorts</code>，但是由於他的依賴關係做得不好，常常令人頭痛</p>
+<p>於是 <code>brew</code> 就出現了拯救了大家，後來就變成 Mac 上的主流</p>
+<p>安裝很簡單，只需要執行以下的 command line 即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div></pre></td></tr></table></figure>
+<p>Mac 原廠設定有包含 Ruby, Python … 等大多數的開發套件，所以可以直接執行指令</p>
+<p><br></p>
+<img src="/blog/MAC/tools/mac-development-tools/git.png" alt="Git" title="Git">
+<h1 id="4-安裝-git"><a href="#4-安裝-git" class="headerlink" title="4. 安裝 git"></a>4. 安裝 git</h1><p>官方網站：<a href="https://git-scm.com/" target="_blank" rel="external">https://git-scm.com/</a></p>
+<p>現今主流的版本控制軟體，應該不用多作解釋吧 XD</p>
+<p>可以透過官方網站的 <code>.dmg</code> 來安裝，也可以透過 <code>brew</code> 來安裝</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install git</div></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="Git-Completion"><a href="#Git-Completion" class="headerlink" title="Git Completion"></a>Git Completion</h3><p>git 在 Linux 上預設就可以使用 tab 鍵自動完成指令</p>
+<p>但是 Mac 上預設卻沒有這個功能，必須要額外下載 git-completion.bash 的腳本</p>
+<p>我們可以從 git 的 github，找到 <a href="https://github.com/git/git/blob/master/contrib/completion/git-completion.bash" target="_blank" rel="external">git-completion.bash</a> 的腳本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 使用 curl 下載到 home 目錄，並且改名為 .git-completion.sh</span></div><div class="line">curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash &gt; ~/.git-completion.sh</div></pre></td></tr></table></figure>
+<p>接著修改 <code>~/.bash_profile</code> 新增以下內容，再重開終端機就行了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># git bash completion</span></div><div class="line">[ <span class="_">-f</span> ~/.git-completion.sh ] &amp;&amp; . ~/.git-completion.sh</div></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="Mac-File-System-不分大小寫"><a href="#Mac-File-System-不分大小寫" class="headerlink" title="Mac File System 不分大小寫"></a>Mac File System 不分大小寫</h3><p>Linux 的 File System 會區分大小寫不同的檔案</p>
+<p>而 Mac 與 Windows 一樣，會將大小寫不同的檔案，視為同一個檔案</p>
+<p>之前有遇過 A 使用 Linux 平台開發，新增檔案 a123 跟 A123</p>
+<p>結果導致我在 Mac 要同步檔案的時候，發生錯誤，還弄了老半天</p>
+<p>所以這一定要特別注意</p>
+<p><br></p>
+<h3 id="git-在各平台的指令，會有些微的不同"><a href="#git-在各平台的指令，會有些微的不同" class="headerlink" title="git 在各平台的指令，會有些微的不同"></a>git 在各平台的指令，會有些微的不同</h3><p>例如說，在 Mac 要將檔案加入提交的時候</p>
+<p>已刪除的檔案，可以用 <code>git add &lt;removed_file&gt;</code></p>
+<p>但是在 Linux 上，必須要用 <code>git rm &lt;removed_file&gt;</code> 才能加入</p>
+<p>就只是要提醒，各平台的 git 指令會有一點點些微的不同</p>
+<p><br></p>
+<img src="/blog/MAC/tools/mac-development-tools/gerrit.png" alt="Gerrit Code Review" title="Gerrit Code Review">
+<h1 id="5-安裝-repo（搭配-Gerrit-使用）"><a href="#5-安裝-repo（搭配-Gerrit-使用）" class="headerlink" title="5. 安裝 repo（搭配 Gerrit 使用）"></a>5. 安裝 repo（搭配 Gerrit 使用）</h1><p>repo 官方網站：<a href="https://code.google.com/p/git-repo/" target="_blank" rel="external">https://code.google.com/p/git-repo/</a></p>
+<p>官方下載安裝教學：<a href="http://source.android.com/source/downloading.html#installing-repo" target="_blank" rel="external">http://source.android.com/source/downloading.html#installing-repo</a></p>
+<p>Google 為管理 Android 這種超大型的專案，於是基於 Git Server 開發出了 <a href="https://www.gerritcodereview.com/" target="_blank" rel="external">Gerrit</a> 系統</p>
+<p>可以有效率的將一個大專案拆成各個小專案，捨棄 git submodules，統一使用 manifest.xml 來管理</p>
+<p>可以減少很多不必要的 patch，例如 merge branch, commit, update submodules commit, … 等等</p>
+<p>開發者可以更專注於功能的開發，追縱 bug</p>
+<p>其 Code Review Web 介面，可以透過 <code>Change-Id</code> 追蹤每個 <code>patch</code> 的訂正情形</p>
+<p><br></p>
+<p><code>Repo</code> 是搭配 <code>Gerrit</code> 所誕生的工具，作為 <code>client</code> 端的 <code>command line</code></p>
+<p>目前最新版的 <code>repo</code> 是使用 <code>python</code> 寫的，由於 Mac 內建已經有安裝 <code>python 2.7.10</code> 所以可以直接執行</p>
+<p>（如果要在 <code>Windows</code> 執行 <code>repo</code>，必須要另外安裝 <code>python</code> 才能運行）</p>
+<p>以 <code>git</code> 的指令為基礎，封裝了 <code>git</code> 與 <code>Gerrit Server</code> 複雜的設定以及溝通的指令</p>
+<p>例如 <code>git pull</code>, <code>git push</code>, <code>git fetch</code> 等容易出錯，及設定錯誤的指令</p>
+<p>大部份的時候，只需要透過 <code>repo sync</code>, <code>repo upload</code> 即可完成同步、上傳程式碼</p>
+<p>執行以下 <code>command line</code> 即可將 <code>repo</code> 安裝到 <code>~/bin</code> 底下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p ~/bin</div><div class="line">curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo</div><div class="line">chmod a+x ~/bin/repo</div></pre></td></tr></table></figure>
+<p>新增路徑 <code>~/bin</code> 到 <code>bash_profile</code></p>
+<figure class="highlight bash"><figcaption><span>~/.bash_profile</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:~/bin</div></pre></td></tr></table></figure>
+<p><br></p>
+<p>使用 <code>repo sync</code> 指令時，他會去先下載 repo 一份最新的 source code，放到 <code>.repo/</code> 目錄底下</p>
+<p>他透過 <code>GPG</code> 去驗證 repo tag 的版本</p>
+<p>如果在 Mac 上使用 <code>repo</code> 發生 <code>GPG</code> 相關的錯誤訊息，請安裝 <code>GPG Tools</code></p>
+<img src="/blog/MAC/tools/mac-development-tools/gpg.png" alt="GPG Tools" title="GPG Tools">
+<p>官方網站：<a href="https://gpgtools.org/" target="_blank" rel="external">https://gpgtools.org/</a></p>
+<p>安裝好之後，他會要求你輸入信箱等等資訊，不用填，直接關掉就可以了</p>
+<p><br></p>
+<img src="/blog/MAC/tools/mac-development-tools/sublime_text.jpg" alt="Sublime Text 3" title="Sublime Text 3">
+<h1 id="6-Sublime-Text-3（★★★★★★）"><a href="#6-Sublime-Text-3（★★★★★★）" class="headerlink" title="6. Sublime Text 3（★★★★★★）"></a>6. Sublime Text 3（★★★★★★）</h1><p>官方網站：<a href="http://www.sublimetext.com/3" target="_blank" rel="external">http://www.sublimetext.com/3</a></p>
+<p>文字編輯超級神器，應該不用多作解釋吧 XD</p>
+<p><br></p>
+<h3 id="設定-Sublime-Command-Line"><a href="#設定-Sublime-Command-Line" class="headerlink" title="設定 Sublime Command Line"></a>設定 Sublime Command Line</h3><p><a href="https://www.sublimetext.com/docs/2/osx_command_line.html" target="_blank" rel="external">https://www.sublimetext.com/docs/2/osx_command_line.html</a></p>
+<p>可以直接透過 command line 用 sublime 開啟檔案</p>
+<p><br></p>
+<h3 id="安裝-Package-Control"><a href="#安裝-Package-Control" class="headerlink" title="安裝 Package Control"></a>安裝 Package Control</h3><p><a href="https://packagecontrol.io/installation#st3" target="_blank" rel="external">https://packagecontrol.io/installation#st3</a></p>
+<p>Sublime Text 有提供各式各樣的套件，可以很簡單的擴充</p>
+<p>例如，我個人經常會使用 Markdown 語法來編寫文件、寫網誌，就非常推薦套件 <strong><em>MarkdownLight</em></strong></p>
+<p>作者的 github：<a href="https://github.com/sekogan/MarkdownLight" target="_blank" rel="external">https://github.com/sekogan/MarkdownLight</a></p>
+<p>而 <strong><em>Babel</em></strong> 也有開發 sublime 的套件，可同時支援 ES5, ES6, JSX 的語法</p>
+<p>Babel 官方網址：<a href="https://babeljs.io/" target="_blank" rel="external">https://babeljs.io/</a></p>
+<p>Babel Github：<a href="https://github.com/babel/babel-sublime" target="_blank" rel="external">https://github.com/babel/babel-sublime</a></p>
+<p><br></p>
+<img src="/blog/MAC/tools/mac-development-tools/text_wrangler.png" alt="TextWrangler" title="TextWrangler">
+<h1 id="7-TextWrangler（★★★）"><a href="#7-TextWrangler（★★★）" class="headerlink" title="7. TextWrangler（★★★）"></a>7. TextWrangler（★★★）</h1><p>官方網站：<a href="http://www.barebones.com/products/textwrangler/" target="_blank" rel="external">http://www.barebones.com/products/textwrangler/</a></p>
+<p>建議從 Mac App Store 安裝：<a href="https://itunes.apple.com/tw/app/textwrangler/id404010395?mt=12" target="_blank" rel="external">https://itunes.apple.com/tw/app/textwrangler/id404010395?mt=12</a></p>
+<p>其實他是一個文字編輯器</p>
+<p>他對我來說 TextWrangler 最大的賣點是，他文內搜尋的介面做得很好</p>
+<p>在 debug 的時候，很適合在幾萬行的 log 裡面搜尋關鍵字</p>
+<p><strong><em>然而一份 log 會有幾萬行，這件事本身很可能就是一個 bug</em></strong></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/mac-development-tools/" data-id="cjc5e2ymc000jjsondswggbvd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://zlargon.github.io/blog/blog/MAC/tools/mac-development-tools/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/tools/mac-development-tools/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/blog/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><a class="extend next" rel="next" href="/blog/page/3/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/blog/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/3/">Next &raquo;</a>
     </nav>
 </section>
             
@@ -1389,25 +1517,6 @@ ga('send', 'pageview');
         <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/blog/uncategorized/ai-ethics/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/blog/uncategorized/ai-ethics/" class="title">ai-ethics</a></p>
-                            <p class="item-date"><time datetime="2017-10-15T23:34:59.000Z" itemprop="datePublished">2017-10-15</time></p>
-                        </div>
-                    </li>
                 
                     <li>
                         
@@ -1485,6 +1594,25 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/MAC/tools/record-both-system-audio-and-mic-input/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/MAC/tools/record-both-system-audio-and-mic-input/sound_flower.png)" alt="Mac 同時收錄 電腦音源 + 麥克風音源" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a></p>
+                            <p class="item-title"><a href="/blog/MAC/tools/record-both-system-audio-and-mic-input/" class="title">Mac 同時收錄 電腦音源 + 麥克風音源</a></p>
+                            <p class="item-date"><time datetime="2016-08-19T04:45:48.000Z" itemprop="datePublished">2016-08-19</time></p>
+                        </div>
+                    </li>
+                
             </ul>
         </div>
     </div>
@@ -1503,7 +1631,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
