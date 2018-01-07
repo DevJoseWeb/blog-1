@@ -159,7 +159,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                18
+                19
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -194,7 +194,7 @@ ga('send', 'pageview');
 
             
             <section id="main">
-    <article id="post-install-redmine-on-mac" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ai-ethics" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -203,7 +203,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/blog/Mac/tools/install-redmine-on-mac/">Install Redmine on Mac</a>
+            <a class="article-title" href="/blog/uncategorized/ai-ethics/">ai-ethics</a>
         </h1>
     
 
@@ -211,49 +211,292 @@ ga('send', 'pageview');
                     
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/blog/Mac/tools/install-redmine-on-mac/">
-            <time datetime="2017-10-10T23:46:51.000Z" itemprop="datePublished">2017-10-10</time>
+        <a href="/blog/uncategorized/ai-ethics/">
+            <time datetime="2017-10-15T23:34:59.000Z" itemprop="datePublished">2017-10-15</time>
         </a>
     </div>
 
 
                     
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/blog/categories/Mac/">Mac</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Mac/tools/">tools</a>
-    </div>
-
                     
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/blog/tags/Redmine/">Redmine</a>
-    </div>
-
                 </div>
             </header>
         
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/Mac/tools/install-redmine-on-mac/redmine.png" alt="redmine" title="redmine">
-<h2 id="1-Install-Brew-amp-Git"><a href="#1-Install-Brew-amp-Git" class="headerlink" title="1. Install Brew &amp; Git"></a>1. Install Brew &amp; Git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Brew</div><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div><div class="line"> </div><div class="line"># Git</div><div class="line">brew install git</div></pre></td></tr></table></figure>
-<h2 id="2-Install-and-Setup-MySQL-5-7-19"><a href="#2-Install-and-Setup-MySQL-5-7-19" class="headerlink" title="2. Install and Setup MySQL (5.7.19)"></a>2. Install and Setup MySQL (5.7.19)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mysql</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysqladmin -u root password &#123;yourpassword&#125;</div><div class="line">mysql -u root -p     <span class="comment"># login MySQL with password</span></div></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> redmine <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'redmine'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'my_password'</span>;</div><div class="line"><span class="keyword">GRANT</span> ALL <span class="keyword">PRIVILEGES</span> <span class="keyword">ON</span> redmine.* <span class="keyword">TO</span> <span class="string">'redmine'</span>@<span class="string">'localhost'</span>;</div></pre></td></tr></table></figure>
-<h2 id="3-Download-and-Setup-Redmine-3-4-2"><a href="#3-Download-and-Setup-Redmine-3-4-2" class="headerlink" title="3. Download and Setup Redmine (3.4.2)"></a>3. Download and Setup Redmine (3.4.2)</h2><ul>
-<li><p><a href="http://www.redmine.org/releases/redmine-3.4.2.tar.gz" target="_blank" rel="external">redmine-3.4.2.tar.gz</a> (md5: 2980b80e9acc81c01c06adb86eb4f37d)</p>
+            <h1 id="1-Intro"><a href="#1-Intro" class="headerlink" title="1. Intro"></a>1. Intro</h1><ul>
+<li><p>Mobile Devices</p>
+<ul>
+<li>intergrate AI technologies<ul>
+<li>natural language processing</li>
+<li>knowledge discovery</li>
+<li>intelligent interface</li>
+<li>recommender system</li>
+</ul>
 </li>
-<li><p>Copy <code>config/database.yml.example</code> to <code>config/database.yml</code> and edit this file in order to configure your database settings for <code>production</code> environment.</p>
+<li>Personal Assistants<ul>
+<li>Apple’s Siri</li>
+<li>Microsoft’s Cortana</li>
+<li>Google’s Google Now</li>
+</ul>
 </li>
 </ul>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">production:</span></div><div class="line"><span class="attr">  adapter:</span> mysql2</div><div class="line"><span class="attr">  database:</span> redmine</div><div class="line"><span class="attr">  host:</span> localhost</div><div class="line"><span class="attr">  port:</span> <span class="number">3307</span></div><div class="line"><span class="attr">  username:</span> root</div><div class="line"><span class="attr">  password:</span> &#123;yourpassword&#125;</div><div class="line"><span class="attr">  encoding:</span> utf8</div></pre></td></tr></table></figure>
-<h2 id="4-Run-Bundle"><a href="#4-Run-Bundle" class="headerlink" title="4. Run Bundle"></a>4. Run Bundle</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo gem install bundler</div><div class="line"> </div><div class="line"><span class="comment"># execute under redmine's folder</span></div><div class="line">bundle install --without development <span class="built_in">test</span></div><div class="line">bundle <span class="built_in">exec</span> rake generate_secret_token</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake db:migrate</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake redmine:load_default_data</div></pre></td></tr></table></figure>
-<h3 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting:"></a>Trouble Shooting:</h3><p>An error occurred while installing mysql2 (0.4.9), and Bundler cannot continue.<br>Make sure that <code>gem install mysql2 -v &#39;0.4.9&#39;</code> succeeds before bundling.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
-<h2 id="5-Start-Redmine"><a href="#5-Start-Redmine" class="headerlink" title="5. Start Redmine"></a>5. Start Redmine</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysql.server restart</div><div class="line">bundle <span class="built_in">exec</span> rails server webrick <span class="_">-e</span> production -p 5432  <span class="comment"># port 5432</span></div></pre></td></tr></table></figure>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li><a href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank" rel="external">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a></li>
-<li><a href="http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer" target="_blank" rel="external">http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer</a></li>
+</li>
+<li><p>New Cognitive System</p>
+<ul>
+<li>IBM’s Watson system<ul>
+<li><a href="https://youtu.be/_Xcmh1LQB9I" target="_blank" rel="external">https://youtu.be/_Xcmh1LQB9I</a></li>
+<li>commonsense reasoning</li>
+<li>knowledge engineering</li>
+<li>task automation</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Autonomous Driving in road safety:</p>
+<ul>
+<li>base on AI technology<ul>
+<li>robotics</li>
+<li>planning</li>
+<li>intelligent control</li>
+<li>multi-agent system</li>
+</ul>
+</li>
+<li>Advantages<ul>
+<li>reduce traffic congestion</li>
+<li>changing human driving behavior and mobility pattern (移動模式)</li>
+</ul>
+</li>
+<li>Disadvantages<ul>
+<li>impact auto industry (BIAS)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Exciting Development in the past years</p>
+<ul>
+<li>technology<ul>
+<li>deep learning</li>
+<li>end-to-end computing paradigm</li>
+</ul>
+</li>
+<li>Effect<ul>
+<li>blossom into an active field of study<ul>
+<li>what active field??</li>
+</ul>
+</li>
+<li>rekindle the interest in one of the old AI traditions<ul>
+<li>what is the problem?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-Growing-Interst-in-AI-Ethics"><a href="#2-Growing-Interst-in-AI-Ethics" class="headerlink" title="2. Growing Interst in AI Ethics"></a>2. Growing Interst in AI Ethics</h1><ul>
+<li><p>Who take major actions for AI Ethics?</p>
+<ul>
+<li>AI technology provider</li>
+<li>Government</li>
+</ul>
+</li>
+<li><p>Multiple Countries are deliberating (深思) legal guidelines for governing the use of driver-less car</p>
+<ul>
+<li>Example<ul>
+<li>US: legislation passed in Washington, DC</li>
+<li>Germany: a committee (researchers, car industry practitioners, government) draft a legal framework</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Research interest in AI ethics is growing, but it’s not new.</p>
+<ul>
+<li>who were established as academic discipline before AI studies?<ul>
+<li>philosophers</li>
+<li>science</li>
+<li>fiction writer</li>
+<li>futurist??? (未來學家)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="3-Major-Discussion-Threads"><a href="#3-Major-Discussion-Threads" class="headerlink" title="3. Major Discussion Threads"></a>3. Major Discussion Threads</h1><ul>
+<li>Meaningful discussions might trigger:<ul>
+<li>further research</li>
+<li>legislative action</li>
+<li>broader societal repercussion (反彈)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Thead-1-Technological-Singularity-and-AI-Doomsday-Scenarios"><a href="#Thead-1-Technological-Singularity-and-AI-Doomsday-Scenarios" class="headerlink" title="Thead 1: Technological Singularity and AI Doomsday Scenarios"></a>Thead 1: Technological Singularity and AI Doomsday Scenarios</h2><ul>
+<li><p>AI is facinated, but frightened by …</p>
+<ul>
+<li>the potential of AI</li>
+<li>impact on society and human civilization</li>
+</ul>
+</li>
+<li><p>Stream: very wide</p>
+<ul>
+<li>science fiction movies and TV series</li>
+<li>AI doomsday scenarios ~ AI/robots helping … or saving …</li>
+</ul>
+</li>
+<li><p>Celebrities: (-)</p>
+<ul>
+<li>Stephen Hawking:<ul>
+<li>The development of full AI could spell the end of the human race.</li>
+<li><a href="http://www.bbc.com/news/technology-30290540" target="_blank" rel="external">http://www.bbc.com/news/technology-30290540</a></li>
+</ul>
+</li>
+<li>Elon Musk:<ul>
+<li>the development of AI is like “summoning (招喚) the demon”</li>
+</ul>
+</li>
+<li>Bill Gates:<ul>
+<li>AI could be an existential threat (存在的威脅) to humans</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Proponent (+):</p>
+<ul>
+<li>Culminate in human immortality</li>
+<li>Redefine consciousness and matter</li>
+</ul>
+</li>
+</ul>
+<p>“Technological Singularity”?</p>
+<ul>
+<li>Eric Horvitz (Microsoft Research Lab)<ul>
+<li>AI doomsday scenarios: science fiction &gt; science fact</li>
+<li>Grow our reliance on AI</li>
+</ul>
+</li>
+</ul>
+<h2 id="Thread-2-Impact-of-Automation-on-Economy-and-Employment"><a href="#Thread-2-Impact-of-Automation-on-Economy-and-Employment" class="headerlink" title="Thread 2: Impact of Automation on Economy and Employment"></a>Thread 2: Impact of Automation on Economy and Employment</h2><p>AI leads to increase productivity, but has some unintented adverse effect.</p>
+<ul>
+<li><p>Example: Algorithmic Trading</p>
+<ul>
+<li>Equity Market crash in 2010 (-)</li>
+<li>improve quality (+)<ul>
+<li>lowered trading cost</li>
+<li>more liquid markets</li>
+<li>reduced discrepancies in prices across related markets</li>
+</ul>
+</li>
+<li>Negative Impact: (-)<ul>
+<li>resembling a single point of failure 相似錯誤的點</li>
+<li>benefiting the few (at the expense of) the many 犧牲多數，完成少數</li>
+<li>detriment of long-term investors </li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Macro level: inequality ↑, unemployment ↑</p>
+<ul>
+<li>winner-take-all scenario</li>
+</ul>
+</li>
+</ul>
+<p>(provider of cheap labor &amp; “ordinay” capitailist)<br>tradition economic agent is squeezed by automation, a new group people might emerge as winners in the new knowledge economy.</p>
+<h2 id="Thead-3-Legal-Ramification-and-Accountability"><a href="#Thead-3-Legal-Ramification-and-Accountability" class="headerlink" title="Thead 3: Legal Ramification and Accountability"></a>Thead 3: Legal Ramification and Accountability</h2><ul>
+<li><p>AI-enable system (high tech) → challenge today’s legal and ethical system (low tech)</p>
+<ul>
+<li>Determine Crime</li>
+<li>Driverless cars<ul>
+<li>New law framework</li>
+<li>Responsibility and Protection of car manufacturers</li>
+</ul>
+</li>
+<li>Medical<ul>
+<li>Robotic surgical system</li>
+</ul>
+</li>
+<li>interrogate robot<ul>
+<li>Kill someone</li>
+<li>Can robot but on a trial?</li>
+<li>“How much” responsibility should the robot’s designer assume?</li>
+<li>Can robot be called on to testify against itself?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Thread-4-Privacy-Considerations-and-Human-Rights"><a href="#Thread-4-Privacy-Considerations-and-Human-Rights" class="headerlink" title="Thread 4: Privacy Considerations and Human Rights"></a>Thread 4: Privacy Considerations and Human Rights</h2><ul>
+<li>Privacy<ul>
+<li>Intelligent softbots and assistive robots collect and process information from human</li>
+<li>attract attention<ul>
+<li>Ryan Calo: <em>Robot Ethics: The Ethical and Social Implications of Robotics (MIT Press, 2011)</em><ul>
+<li>three aspect of privacy<ul>
+<li>direct surveillance</li>
+<li>increased access</li>
+<li>social meaning</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Human Rights<ul>
+<li>an international company bought “Skunk Riot Control Copter” to suppress labor riot.<ul>
+<li>a drone armed with plastic bullets and pepper spray</li>
+</ul>
+</li>
+<li>autonomous weapon could pose risk</li>
+</ul>
+</li>
+</ul>
+<h2 id="Thread-5-Human-AI-Relations"><a href="#Thread-5-Human-AI-Relations" class="headerlink" title="Thread 5: Human-AI Relations"></a>Thread 5: Human-AI Relations</h2><ul>
+<li>Robots will fully interact with humans in the future, including emotion.<ul>
+<li>Can AI understand feeling?</li>
+<li>Can we feel AI?</li>
+</ul>
+</li>
+<li>Robots care for<ul>
+<li>children</li>
+<li>elderly</li>
+<li>the disabled</li>
+</ul>
+</li>
+<li>User could have an attachment to robots</li>
+</ul>
+<h2 id="Thead-6-Robot-Right"><a href="#Thead-6-Robot-Right" class="headerlink" title="Thead 6: Robot Right"></a>Thead 6: Robot Right</h2><ul>
+<li>Question<ul>
+<li>Should Robot have robot right?</li>
+<li>Should they be treated as conscious beings?</li>
+<li>Does the First Amendant protect robots’ speech?</li>
+<li>Do we need laws to protect robots from being abused?</li>
+</ul>
+</li>
+<li>It’s too early to discuss<ul>
+<li>Boston Dynamics employee kicking a robot dog (Discission)<ul>
+<li><a href="https://youtu.be/aR5Z6AoMh6U" target="_blank" rel="external">https://youtu.be/aR5Z6AoMh6U</a></li>
+</ul>
+</li>
+<li>protecting robot rights indirectly protects human rights</li>
+</ul>
+</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
+<li>the deeper and wider adoption of AI, and AI Ethics became real</li>
+<li>AI Ethics is no longer a philosophical topic nor creative thinking</li>
+<li>Isaac Asimov’s “Three Laws of Robotics”, 1942<ul>
+<li>A robot may not injure a human being or, through inaction, allow a human being to come to harm.</li>
+<li>A robot must obey the orders given it by human beings except where such orders would conflict with the First Law.</li>
+<li>A robot must protect its own existence as long as such protection does not conflict with the First or Second Laws.</li>
+</ul>
+</li>
+<li>EPSRC / AHRC principles of robotics, 2011</li>
+<li>Robots should not be designed solely or primarily to kill or harm humans.</li>
+<li>Humans, not robots, are responsible agents. Robots are tools designed to achieve human goals.</li>
+<li>Robots should be designed in ways that assure their safety and security.</li>
+<li>Robots are artifacts; they should not be designed to exploit vulnerable users by evoking an emotional response or dependency. It should always be possible to tell a robot from a human.</li>
+<li>It should always be possible to find out who is legally responsible for a robot.</li>
 </ul>
 
         
@@ -265,7 +508,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/Mac/tools/install-redmine-on-mac/" data-id="cj8nsgj2f000191on32h6bh45" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/uncategorized/ai-ethics/" data-id="cjc5e2agc0001j4onbs5s94eb" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -333,7 +576,156 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/Mac/tools/install-redmine-on-mac/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/Mac/tools/install-redmine-on-mac/">Comments</a>
+        <a href="https://zlargon.github.io/blog/blog/uncategorized/ai-ethics/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/uncategorized/ai-ethics/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-install-redmine-on-mac" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/blog/MAC/tools/install-redmine-on-mac/">Install Redmine on Mac</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/MAC/tools/install-redmine-on-mac/">
+            <time datetime="2017-10-10T23:46:51.000Z" itemprop="datePublished">2017-10-10</time>
+        </a>
+    </div>
+
+
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a>
+    </div>
+
+                    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/blog/tags/Redmine/">Redmine</a>
+    </div>
+
+                </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <img src="/blog/MAC/tools/install-redmine-on-mac/redmine.png" alt="redmine" title="redmine">
+<h2 id="1-Install-Brew-amp-Git"><a href="#1-Install-Brew-amp-Git" class="headerlink" title="1. Install Brew &amp; Git"></a>1. Install Brew &amp; Git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Brew</div><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div><div class="line"></div><div class="line"># Git</div><div class="line">brew install git</div></pre></td></tr></table></figure>
+<h2 id="2-Install-and-Setup-MySQL-5-7-19"><a href="#2-Install-and-Setup-MySQL-5-7-19" class="headerlink" title="2. Install and Setup MySQL (5.7.19)"></a>2. Install and Setup MySQL (5.7.19)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mysql</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysqladmin -u root password &#123;yourpassword&#125;</div><div class="line">mysql -u root -p     <span class="comment"># login MySQL with password</span></div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> redmine <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'redmine'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'my_password'</span>;</div><div class="line"><span class="keyword">GRANT</span> ALL <span class="keyword">PRIVILEGES</span> <span class="keyword">ON</span> redmine.* <span class="keyword">TO</span> <span class="string">'redmine'</span>@<span class="string">'localhost'</span>;</div></pre></td></tr></table></figure>
+<h2 id="3-Download-and-Setup-Redmine-3-4-2"><a href="#3-Download-and-Setup-Redmine-3-4-2" class="headerlink" title="3. Download and Setup Redmine (3.4.2)"></a>3. Download and Setup Redmine (3.4.2)</h2><ul>
+<li><p><a href="http://www.redmine.org/releases/redmine-3.4.2.tar.gz" target="_blank" rel="external">redmine-3.4.2.tar.gz</a> (md5: 2980b80e9acc81c01c06adb86eb4f37d)</p>
+</li>
+<li><p>Copy <code>config/database.yml.example</code> to <code>config/database.yml</code> and edit this file in order to configure your database settings for <code>production</code> environment.</p>
+</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">production:</span></div><div class="line"><span class="attr">  adapter:</span> mysql2</div><div class="line"><span class="attr">  database:</span> redmine</div><div class="line"><span class="attr">  host:</span> localhost</div><div class="line"><span class="attr">  port:</span> <span class="number">3307</span></div><div class="line"><span class="attr">  username:</span> root</div><div class="line"><span class="attr">  password:</span> &#123;yourpassword&#125;</div><div class="line"><span class="attr">  encoding:</span> utf8</div></pre></td></tr></table></figure>
+<h2 id="4-Run-Bundle"><a href="#4-Run-Bundle" class="headerlink" title="4. Run Bundle"></a>4. Run Bundle</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo gem install bundler</div><div class="line"></div><div class="line"><span class="comment"># execute under redmine's folder</span></div><div class="line">bundle install --without development <span class="built_in">test</span></div><div class="line">bundle <span class="built_in">exec</span> rake generate_secret_token</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake db:migrate</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake redmine:load_default_data</div></pre></td></tr></table></figure>
+<h3 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting:"></a>Trouble Shooting:</h3><p>An error occurred while installing mysql2 (0.4.9), and Bundler cannot continue.<br>Make sure that <code>gem install mysql2 -v &#39;0.4.9&#39;</code> succeeds before bundling.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
+<h2 id="5-Start-Redmine"><a href="#5-Start-Redmine" class="headerlink" title="5. Start Redmine"></a>5. Start Redmine</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysql.server restart</div><div class="line">bundle <span class="built_in">exec</span> rails server webrick <span class="_">-e</span> production -p 5432  <span class="comment"># port 5432</span></div></pre></td></tr></table></figure>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li><a href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank" rel="external">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a></li>
+<li><a href="http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer" target="_blank" rel="external">http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer</a></li>
+</ul>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/install-redmine-on-mac/" data-id="cjc5e2agl0008j4onzw58p4cg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://zlargon.github.io/blog/blog/MAC/tools/install-redmine-on-mac/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/tools/install-redmine-on-mac/">Comments</a>
     
 
         </footer>
@@ -410,7 +802,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/mac-camera-not-works/" data-id="cj8nsgj34000a91onwb11kw5d" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/mac-camera-not-works/" data-id="cjc5e2agt000dj4onhcehldln" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -691,7 +1083,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/TOEFL/how-to-memorize-vocabulary/" data-id="cj8nsgj2u000491onuzedozsi" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/TOEFL/how-to-memorize-vocabulary/" data-id="cjc5e2agj0007j4on08yxkjfv" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1021,7 +1413,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/TOEFL/toefl-listening-plus-questions/" data-id="cj8nsgj4m003w91on291zyrio" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/TOEFL/toefl-listening-plus-questions/" data-id="cjc5e2ah80018j4onx5nodrig" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1211,7 +1603,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/record-both-system-audio-and-mic-input/" data-id="cj8nsgj3e000k91on6c993y84" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/record-both-system-audio-and-mic-input/" data-id="cjc5e2ah5000vj4onvwbf4bvd" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1289,149 +1681,8 @@ ga('send', 'pageview');
 
 
 
-    <article id="post-selection-box-of-chinese-input-method-is-missing" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">中文輸入法選字框 無法顯示</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">
-            <time datetime="2016-06-24T13:07:10.000Z" itemprop="datePublished">2016-06-24</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/others/">others</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/blog/tags/中文輸入法/">中文輸入法</a>
-    </div>
-
-                </div>
-            </header>
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <img src="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/osx_logo.jpg" alt="OS X" title="OS X">
-<p>自從我的 MAC OSX 升級到 10.11 之後，就常常會遇到中文輸入法選字框消失的情形<br>只能靠重開機來修復，還滿煩的</p>
-<p>我後來有拍影片傳到 Youtube，也有在 Apple 社群發問，終於遇到好心人回覆了<br>ya~ 終於不用再一直重開機了 ^0^</p>
-<h2 id="解決方案"><a href="#解決方案" class="headerlink" title="解決方案"></a>解決方案</h2><p>在終端機輸入 <code>killall TCIM</code></p>
-<img src="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/TCIM.png" alt="TCIM" title="TCIM">
-<p>這個指令把背景執行的<code>TCIM</code>（中文輸入法）的程序關掉<br>當作業系統發現 <code>TCIM</code> 不見之後，就會強迫重新啟動 <code>TCIM</code>，這時候選字框就回來了</p>
-<h2 id="影片連結"><a href="#影片連結" class="headerlink" title="影片連結"></a>影片連結</h2><div class="video-container"><iframe src="//www.youtube.com/embed/m_f44XGfDXw" frameborder="0" allowfullscreen></iframe></div>
-<p><br></p>
-<h2 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h2><ul>
-<li><a href="http://blog.tenyi.com/2015/10/mac-os-x-ei-capitan.html" target="_blank" rel="external">http://blog.tenyi.com/2015/10/mac-os-x-ei-capitan.html</a></li>
-<li><a href="https://discussionschinese.apple.com/thread/73381" target="_blank" rel="external">https://discussionschinese.apple.com/thread/73381</a></li>
-</ul>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/" data-id="cj8nsgj3g000p91ontm9zf7uj" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
     <nav id="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/2/">Next &raquo;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><a class="extend next" rel="next" href="/blog/page/2/">Next &raquo;</a>
     </nav>
 </section>
             
@@ -1446,18 +1697,37 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/Mac/tools/install-redmine-on-mac/" class="thumbnail">
+                            <a href="/blog/uncategorized/ai-ethics/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/Mac/tools/install-redmine-on-mac/redmine.png)" alt="Install Redmine on Mac" class="thumbnail-image"></span>
+        <span class="thumbnail-image thumbnail-none"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Mac/">Mac</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/Mac/tools/">tools</a></p>
-                            <p class="item-title"><a href="/blog/Mac/tools/install-redmine-on-mac/" class="title">Install Redmine on Mac</a></p>
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/blog/uncategorized/ai-ethics/" class="title">ai-ethics</a></p>
+                            <p class="item-date"><time datetime="2017-10-15T23:34:59.000Z" itemprop="datePublished">2017-10-15</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/MAC/tools/install-redmine-on-mac/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/MAC/tools/install-redmine-on-mac/redmine.png)" alt="Install Redmine on Mac" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a></p>
+                            <p class="item-title"><a href="/blog/MAC/tools/install-redmine-on-mac/" class="title">Install Redmine on Mac</a></p>
                             <p class="item-date"><time datetime="2017-10-10T23:46:51.000Z" itemprop="datePublished">2017-10-10</time></p>
                         </div>
                     </li>
@@ -1519,25 +1789,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/blog/MAC/tools/record-both-system-audio-and-mic-input/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/blog/MAC/tools/record-both-system-audio-and-mic-input/sound_flower.png)" alt="Mac 同時收錄 電腦音源 + 麥克風音源" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a></p>
-                            <p class="item-title"><a href="/blog/MAC/tools/record-both-system-audio-and-mic-input/" class="title">Mac 同時收錄 電腦音源 + 麥克風音源</a></p>
-                            <p class="item-date"><time datetime="2016-08-19T04:45:48.000Z" itemprop="datePublished">2016-08-19</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1547,7 +1798,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/">MAC</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/others/">others</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/tools/">tools</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Mac/">Mac</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Mac/tools/">tools</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/TOEFL/">TOEFL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/">iOS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/others/">others</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/misc/">misc</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/">MAC</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/others/">others</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/tools/">tools</a><span class="category-list-count">8</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/TOEFL/">TOEFL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/">iOS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/others/">others</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/misc/">misc</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1556,7 +1807,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1577,7 +1828,7 @@ ga('send', 'pageview');
         <footer id="footer">
     <div class="outer">
         <div id="footer-info" class="inner">
-            &copy; 2017 zlargon<br>
+            &copy; 2018 zlargon<br>
             Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
         </div>
     </div>
