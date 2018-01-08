@@ -9,6 +9,7 @@
 <meta property="og:title" content="zlargon">
 <meta property="og:url" content="https://zlargon.github.io/blog/page/2/index.html">
 <meta property="og:site_name" content="zlargon">
+<meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zlargon">
     
@@ -159,7 +160,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                18
+                19
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -194,7 +195,7 @@ ga('send', 'pageview');
 
             
             <section id="main">
-    <article id="post-stop-android-file-transfer-auto-starting" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-selection-box-of-chinese-input-method-is-missing" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -203,7 +204,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/blog/MAC/others/stop-android-file-transfer-auto-starting/">取消自動開啟 Android File Transfer</a>
+            <a class="article-title" href="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">中文輸入法選字框 無法顯示</a>
         </h1>
     
 
@@ -211,8 +212,8 @@ ga('send', 'pageview');
                     
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/blog/MAC/others/stop-android-file-transfer-auto-starting/">
-            <time datetime="2016-04-12T04:36:56.000Z" itemprop="datePublished">2016-04-12</time>
+        <a href="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">
+            <time datetime="2016-06-24T13:07:10.000Z" itemprop="datePublished">2016-06-24</time>
         </a>
     </div>
 
@@ -226,7 +227,7 @@ ga('send', 'pageview');
                     
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/blog/tags/Android/">Android</a>, <a class="tag-link" href="/blog/tags/MAC/">MAC</a>
+        <a class="tag-link" href="/blog/tags/中文輸入法/">中文輸入法</a>
     </div>
 
                 </div>
@@ -235,41 +236,18 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/android_file_transfer.png" alt="Android File Transfer" title="Android File Transfer">
-<p>Google 官方推出的 <a href="https://www.android.com/filetransfer/" target="_blank" rel="external"><strong>Android File Transfer</strong></a> 是一款專為 OSX 瀏覽 Android 裝置檔案目錄的軟體<br>只要 Android 裝置透過 USB 連接 MAC 電腦，就會自行跳出瀏覽檔案目錄的介面</p>
-<p><strong>Download:</strong><br><a href="https://www.android.com/filetransfer/" target="_blank" rel="external">https://www.android.com/filetransfer/</a></p>
-<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/user_interface.png" alt="使用者介面" title="使用者介面">
-<h2 id="無法正常開啟"><a href="#無法正常開啟" class="headerlink" title="無法正常開啟"></a>無法正常開啟</h2><img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/cannot_access.png" alt="can not access" title="can not access">
-<p>如果連接時，出現以上的警告訊息，請先將 Android 的 USB 選項調整至 <code>檔案轉移</code>，再重新開啟 <code>Android File Transter</code></p>
-<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/usb_option.png" alt="USB 選項" title="USB 選項">
-<h2 id="關閉自動啟動"><a href="#關閉自動啟動" class="headerlink" title="關閉自動啟動"></a>關閉自動啟動</h2><p>只要 Android 一插上 MAC 電腦，就立即跳出 <code>Android File Transter</code>，但有時候我們只是想要讓手機插在電腦上充電而已，還要手動關掉也是挺惱人的</p>
-<p>其實他是有另外一個背景程序 <code>Android File Transfer Agent</code>，他的任務是當發現有 Android 裝置透過 USB 連接電腦時，就啟動 <code>Android File Transter</code>；因此只要將 <code>Android File Transfer Agent</code> 移除，就不會自行啟動了</p>
+            <img src="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/osx_logo.jpg" title="OS X">
+<p>自從我的 MAC OSX 升級到 10.11 之後，就常常會遇到中文輸入法選字框消失的情形<br>只能靠重開機來修復，還滿煩的</p>
+<p>我後來有拍影片傳到 Youtube，也有在 Apple 社群發問，終於遇到好心人回覆了<br>ya~ 終於不用再一直重開機了 ^0^</p>
+<h2 id="解決方案"><a href="#解決方案" class="headerlink" title="解決方案"></a>解決方案</h2><p>在終端機輸入 <code>killall TCIM</code></p>
+<img src="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/TCIM.png" title="TCIM">
+<p>這個指令把背景執行的<code>TCIM</code>（中文輸入法）的程序關掉<br>當作業系統發現 <code>TCIM</code> 不見之後，就會強迫重新啟動 <code>TCIM</code>，這時候選字框就回來了</p>
+<h2 id="影片連結"><a href="#影片連結" class="headerlink" title="影片連結"></a>影片連結</h2><div class="video-container"><iframe src="//www.youtube.com/embed/m_f44XGfDXw" frameborder="0" allowfullscreen></iframe></div>
 <p><br></p>
-<ol>
-<li><h3 id="關閉背景程序-Android-File-Transfer-Agent"><a href="#關閉背景程序-Android-File-Transfer-Agent" class="headerlink" title="關閉背景程序 Android File Transfer Agent"></a>關閉背景程序 <code>Android File Transfer Agent</code></h3><p>開啟 <code>活動監視器 (Activity Monitor)</code> &gt; 找到 <code>Android File Transfer Agent</code>後點兩下開啟 &gt; 按 <code>結束</code> 終止背景程序</p>
-<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/activity_monitor.png" alt="活動監視器" title="活動監視器">
-<p>這時候我們再插拔 USB，<code>Android File Transfer</code> 已經不會再自行啟動了</p>
-<p>但是只要一開啟 <code>Android File Transter</code>，他就會默默得把 <code>Android File Transfer Agent</code> 重新叫起來，因此我們要將 <code>Android File Transfer Agent</code> 移除才行</p>
-</li>
-<li><h3 id="移除-Android-File-Transfer-Agent"><a href="#移除-Android-File-Transfer-Agent" class="headerlink" title="移除 Android File Transfer Agent"></a>移除 <code>Android File Transfer Agent</code></h3><p><code>Android File Transfer Agent</code> 檔案位置如下：</p>
-<ul>
-<li><code>/Applications/Android File Transfer.app/Contents/Resources</code></li>
-<li><code>~/Library/Application Support/Google/Android File Transfer</code></li>
+<h2 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h2><ul>
+<li><a href="http://blog.tenyi.com/2015/10/mac-os-x-ei-capitan.html" target="_blank" rel="noopener">http://blog.tenyi.com/2015/10/mac-os-x-ei-capitan.html</a></li>
+<li><a href="https://discussionschinese.apple.com/thread/73381" target="_blank" rel="noopener">https://discussionschinese.apple.com/thread/73381</a></li>
 </ul>
-<p>可以在 <code>Finder</code> 按 <code>cmd + shift + G</code> 貼上以上位置前往，或是用 <code>終端機</code> 都過指令的方式來開啟資料夾</p>
-<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/file_path_1.png" alt="/Applications/Android File Transfer.app/Contents/Resources" title="/Applications/Android File Transfer.app/Contents/Resources">
-<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/file_path_2.png" alt="~/Library/Application Support/Google/Android File Transfer" title="~/Library/Application Support/Google/Android File Transfer">
-<p>你可以選擇備份檔案（重新命名），如果未來有需要的時候再把它加回來（把檔案名稱改回來）<br>如果你很確定不要這個功能，那就直接刪除吧！</p>
-</li>
-<li><h3 id="將-Android-File-Transfer-Agent-從-登入項目-中移除"><a href="#將-Android-File-Transfer-Agent-從-登入項目-中移除" class="headerlink" title="將 Android File Transfer Agent 從 登入項目 中移除"></a>將 <code>Android File Transfer Agent</code> 從 <code>登入項目</code> 中移除</h3><p>如果你選擇不移除，而是重新命名的話，下次登入時 <code>Android File Transfer Agent</code> 還是會被啟動，因此必須從 <code>登入項目</code> 把它移除</p>
-<ul>
-<li><code>系統偏好設定（System Preferences）</code> &gt; <code>使用者群組（Users &amp; Groups）</code> &gt; <code>登入項目（Login Items）</code></li>
-</ul>
-<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/user_login_items.png" alt="登入項目" title="登入項目">
-</li>
-</ol>
-<p>這樣就大功告成啦！</p>
-<p>不過這些步驟實在太繁瑣了，我覺得 <code>Android File Transfer</code> 應該要內建這個偏好設定才對！</p>
 
         
         </div>
@@ -280,7 +258,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/stop-android-file-transfer-auto-starting/" data-id="cjc5e8dvi0014kwonmgcbkrh2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/" data-id="cjc5px0520013iaon1v4b2nyo" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -348,7 +326,171 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/MAC/others/stop-android-file-transfer-auto-starting/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/others/stop-android-file-transfer-auto-starting/">Comments</a>
+        <a href="https://zlargon.github.io/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-stop-android-file-transfer-auto-starting" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/blog/MAC/others/stop-android-file-transfer-auto-starting/">取消自動開啟 Android File Transfer</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/MAC/others/stop-android-file-transfer-auto-starting/">
+            <time datetime="2016-04-12T04:36:56.000Z" itemprop="datePublished">2016-04-12</time>
+        </a>
+    </div>
+
+
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/others/">others</a>
+    </div>
+
+                    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/blog/tags/Android/">Android</a>, <a class="tag-link" href="/blog/tags/MAC/">MAC</a>
+    </div>
+
+                </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/android_file_transfer.png" title="Android File Transfer">
+<p>Google 官方推出的 <a href="https://www.android.com/filetransfer/" target="_blank" rel="noopener"><strong>Android File Transfer</strong></a> 是一款專為 OSX 瀏覽 Android 裝置檔案目錄的軟體<br>只要 Android 裝置透過 USB 連接 MAC 電腦，就會自行跳出瀏覽檔案目錄的介面</p>
+<p><strong>Download:</strong><br><a href="https://www.android.com/filetransfer/" target="_blank" rel="noopener">https://www.android.com/filetransfer/</a></p>
+<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/user_interface.png" title="使用者介面">
+<h2 id="無法正常開啟"><a href="#無法正常開啟" class="headerlink" title="無法正常開啟"></a>無法正常開啟</h2><img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/cannot_access.png" title="can not access">
+<p>如果連接時，出現以上的警告訊息，請先將 Android 的 USB 選項調整至 <code>檔案轉移</code>，再重新開啟 <code>Android File Transter</code></p>
+<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/usb_option.png" title="USB 選項">
+<h2 id="關閉自動啟動"><a href="#關閉自動啟動" class="headerlink" title="關閉自動啟動"></a>關閉自動啟動</h2><p>只要 Android 一插上 MAC 電腦，就立即跳出 <code>Android File Transter</code>，但有時候我們只是想要讓手機插在電腦上充電而已，還要手動關掉也是挺惱人的</p>
+<p>其實他是有另外一個背景程序 <code>Android File Transfer Agent</code>，他的任務是當發現有 Android 裝置透過 USB 連接電腦時，就啟動 <code>Android File Transter</code>；因此只要將 <code>Android File Transfer Agent</code> 移除，就不會自行啟動了</p>
+<p><br></p>
+<ol>
+<li><h3 id="關閉背景程序-Android-File-Transfer-Agent"><a href="#關閉背景程序-Android-File-Transfer-Agent" class="headerlink" title="關閉背景程序 Android File Transfer Agent"></a>關閉背景程序 <code>Android File Transfer Agent</code></h3><p>開啟 <code>活動監視器 (Activity Monitor)</code> &gt; 找到 <code>Android File Transfer Agent</code>後點兩下開啟 &gt; 按 <code>結束</code> 終止背景程序</p>
+<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/activity_monitor.png" title="活動監視器">
+<p>這時候我們再插拔 USB，<code>Android File Transfer</code> 已經不會再自行啟動了</p>
+<p>但是只要一開啟 <code>Android File Transter</code>，他就會默默得把 <code>Android File Transfer Agent</code> 重新叫起來，因此我們要將 <code>Android File Transfer Agent</code> 移除才行</p>
+</li>
+<li><h3 id="移除-Android-File-Transfer-Agent"><a href="#移除-Android-File-Transfer-Agent" class="headerlink" title="移除 Android File Transfer Agent"></a>移除 <code>Android File Transfer Agent</code></h3><p><code>Android File Transfer Agent</code> 檔案位置如下：</p>
+<ul>
+<li><code>/Applications/Android File Transfer.app/Contents/Resources</code></li>
+<li><code>~/Library/Application Support/Google/Android File Transfer</code></li>
+</ul>
+<p>可以在 <code>Finder</code> 按 <code>cmd + shift + G</code> 貼上以上位置前往，或是用 <code>終端機</code> 都過指令的方式來開啟資料夾</p>
+<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/file_path_1.png" title="/Applications/Android File Transfer.app/Contents/Resources">
+<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/file_path_2.png" title="~/Library/Application Support/Google/Android File Transfer">
+<p>你可以選擇備份檔案（重新命名），如果未來有需要的時候再把它加回來（把檔案名稱改回來）<br>如果你很確定不要這個功能，那就直接刪除吧！</p>
+</li>
+<li><h3 id="將-Android-File-Transfer-Agent-從-登入項目-中移除"><a href="#將-Android-File-Transfer-Agent-從-登入項目-中移除" class="headerlink" title="將 Android File Transfer Agent 從 登入項目 中移除"></a>將 <code>Android File Transfer Agent</code> 從 <code>登入項目</code> 中移除</h3><p>如果你選擇不移除，而是重新命名的話，下次登入時 <code>Android File Transfer Agent</code> 還是會被啟動，因此必須從 <code>登入項目</code> 把它移除</p>
+<ul>
+<li><code>系統偏好設定（System Preferences）</code> &gt; <code>使用者群組（Users &amp; Groups）</code> &gt; <code>登入項目（Login Items）</code></li>
+</ul>
+<img src="/blog/MAC/others/stop-android-file-transfer-auto-starting/user_login_items.png" title="登入項目">
+</li>
+</ol>
+<p>這樣就大功告成啦！</p>
+<p>不過這些步驟實在太繁瑣了，我覺得 <code>Android File Transfer</code> 應該要內建這個偏好設定才對！</p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://zlargon.github.io/blog/MAC/others/stop-android-file-transfer-auto-starting/" data-id="cjc5px0530016iaon05thfr36" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://zlargon.github.io/blog/MAC/others/stop-android-file-transfer-auto-starting/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/MAC/others/stop-android-file-transfer-auto-starting/">Comments</a>
     
 
         </footer>
@@ -399,7 +541,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/misc/naming-of-planets-and-days/eight-planets.png" alt="八大行星" title="八大行星">
+            <img src="/blog/misc/naming-of-planets-and-days/eight-planets.png" title="八大行星">
 <p>在星期的命名上，不論東方或是西方，最早都是採用星球來命名<br>古人以為地球是世界的中心，而所有的星球都是繞著地球旋轉<br>而古人用肉眼所能見到的星球，主要就是太陽、月亮、水星、金星、火星、木星、土星<br>西方習慣以希羅神話的神來為星球命名，而東方則是採用陰陽五行來命名<br>七個星球剛好對應到星期一到星期日<br>天王星、海王星、冥王星由於距離太遙遠了，古代天文技術還無法觀察到，所以不在探討範圍</p>
 <h1 id="東方"><a href="#東方" class="headerlink" title="東方"></a>東方</h1><h3 id="中國古代五大行星"><a href="#中國古代五大行星" class="headerlink" title="中國古代五大行星"></a>中國古代五大行星</h3><ul>
 <li><strong>辰星（水星）</strong>：由地球觀測，去日總在一辰（15度）之內</li>
@@ -685,14 +827,14 @@ ga('send', 'pageview');
 <p>除了天王星是採用希臘名 Uranus，地球則是採用古英文 Earth 之外，其他都是沿用羅馬的神名<br>冥王星現在已被從九大行星除名，目前為八大行星<br>中國古代並沒有天王、海王、冥王星，所以中文名稱是近代直接中譯得來的</p>
 <p><br></p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
-<li><a href="http://blog.sina.com.tw/6773/article.php?entryid=9134" target="_blank" rel="external">http://blog.sina.com.tw/6773/article.php?entryid=9134</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E6%98%9F%E6%9C%9F" target="_blank" rel="external">https://zh.wikipedia.org/wiki/%E6%98%9F%E6%9C%9F</a></li>
-<li><a href="http://chrissky21.pixnet.net/blog/post/3151458-%E9%97%9C%E6%96%BC%E4%B9%9D%E5%A4%A7%E8%A1%8C%E6%98%9F%E3%80%82" target="_blank" rel="external">http://chrissky21.pixnet.net/blog/post/3151458-%E9%97%9C%E6%96%BC%E4%B9%9D%E5%A4%A7%E8%A1%8C%E6%98%9F%E3%80%82</a></li>
-<li><a href="http://blog.roodo.com/biofive/archives/36251433.html" target="_blank" rel="external">http://blog.roodo.com/biofive/archives/36251433.html</a></li>
-<li><a href="http://www.crowl.org/lawrence/time/days.html" target="_blank" rel="external">http://www.crowl.org/lawrence/time/days.html</a></li>
-<li><a href="http://www.snzlkfb.net/system/2015/08/03/010169069.shtml" target="_blank" rel="external">http://www.snzlkfb.net/system/2015/08/03/010169069.shtml</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Terra" target="_blank" rel="external">https://en.wikipedia.org/wiki/Terra</a></li>
-<li><a href="https://tw.answers.yahoo.com/question/index?qid=20060608000012KK15886" target="_blank" rel="external">https://tw.answers.yahoo.com/question/index?qid=20060608000012KK15886</a></li>
+<li><a href="http://blog.sina.com.tw/6773/article.php?entryid=9134" target="_blank" rel="noopener">http://blog.sina.com.tw/6773/article.php?entryid=9134</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E6%98%9F%E6%9C%9F" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E6%98%9F%E6%9C%9F</a></li>
+<li><a href="http://chrissky21.pixnet.net/blog/post/3151458-%E9%97%9C%E6%96%BC%E4%B9%9D%E5%A4%A7%E8%A1%8C%E6%98%9F%E3%80%82" target="_blank" rel="noopener">http://chrissky21.pixnet.net/blog/post/3151458-%E9%97%9C%E6%96%BC%E4%B9%9D%E5%A4%A7%E8%A1%8C%E6%98%9F%E3%80%82</a></li>
+<li><a href="http://blog.roodo.com/biofive/archives/36251433.html" target="_blank" rel="noopener">http://blog.roodo.com/biofive/archives/36251433.html</a></li>
+<li><a href="http://www.crowl.org/lawrence/time/days.html" target="_blank" rel="noopener">http://www.crowl.org/lawrence/time/days.html</a></li>
+<li><a href="http://www.snzlkfb.net/system/2015/08/03/010169069.shtml" target="_blank" rel="noopener">http://www.snzlkfb.net/system/2015/08/03/010169069.shtml</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Terra" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Terra</a></li>
+<li><a href="https://tw.answers.yahoo.com/question/index?qid=20060608000012KK15886" target="_blank" rel="noopener">https://tw.answers.yahoo.com/question/index?qid=20060608000012KK15886</a></li>
 </ul>
 
         
@@ -704,7 +846,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/misc/naming-of-planets-and-days/" data-id="cjc5e8dvd000nkwon7jvpqt7a" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/misc/naming-of-planets-and-days/" data-id="cjc5px04w000riaonjc9c5gpu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -772,7 +914,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/misc/naming-of-planets-and-days/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/misc/naming-of-planets-and-days/">Comments</a>
+        <a href="https://zlargon.github.io/blog/misc/naming-of-planets-and-days/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/misc/naming-of-planets-and-days/">Comments</a>
     
 
         </footer>
@@ -823,21 +965,21 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/MAC/others/chrome-cannot-upgrade-automatically/chrome.png" alt="Chrome" title="Chrome">
+            <img src="/blog/MAC/others/chrome-cannot-upgrade-automatically/chrome.png" title="Chrome">
 <p>前一陣子有發現 Chrome 瀏覽器的版本總是停留在舊的 43 版</p>
 <p>然後打開 <code>關於 Google Chrome</code> 的頁面，也無法手動更新</p>
 <p>我按照 Chrome 官方的文件步驟，也無法解決問題</p>
-<p><a href="https://support.google.com/chrome/answer/111996?hl=zh-Hant" target="_blank" rel="external">修正 Chrome 更新問題與更新失敗問題</a></p>
+<p><a href="https://support.google.com/chrome/answer/111996?hl=zh-Hant" target="_blank" rel="noopener">修正 Chrome 更新問題與更新失敗問題</a></p>
 <p>我的 Mac 並沒有存在惡意軟體，重開 Chrome、重開電腦也沒用</p>
 <p>最後只能重新下載安裝 Chrome，強制更新到最新的 44 版</p>
-<img src="/blog/MAC/others/chrome-cannot-upgrade-automatically/about_chrome.png" alt="關於 Google Chrome" title="關於 Google Chrome">
+<img src="/blog/MAC/others/chrome-cannot-upgrade-automatically/about_chrome.png" title="關於 Google Chrome">
 <p><br></p>
 <p>但是過了一陣子，又突然發現 Chrome 遲遲停留在 44 版，但卻沒有更新到 46 版</p>
 <p>後來我上網終於找到了一個可行的解決方案</p>
-<p><a href="http://iphone4.tw/forums/showthread.php?t=125277" target="_blank" rel="external">http://iphone4.tw/forums/showthread.php?t=125277</a></p>
+<p><a href="http://iphone4.tw/forums/showthread.php?t=125277" target="_blank" rel="noopener">http://iphone4.tw/forums/showthread.php?t=125277</a></p>
 <p>其作法是將 <code>GoogleSoftwareUpdate</code> 刪除，然後迫使 Google Chrome 重新安裝 <code>GoogleSoftwareUpdate</code></p>
 <p>這裡要注意的是，新版的 Google Chrome 已經將檔案 <code>install.py</code> 改名為 <code>ksinstall</code></p>
-<img src="/blog/MAC/others/chrome-cannot-upgrade-automatically/ksinstall.png" alt="ksinstall" title="ksinstall">
+<img src="/blog/MAC/others/chrome-cannot-upgrade-automatically/ksinstall.png" title="ksinstall">
 <p><br></p>
 <h1 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h1><ul>
 <li>開啟終端機，執行以下的指令（會分別刪除 <strong><em>使用者目錄</em></strong> 及 <strong><em>根目錄</em></strong> 底下 <code>GoogleSoftwareUpdate</code>）</li>
@@ -854,7 +996,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/chrome-cannot-upgrade-automatically/" data-id="cjc5e8duo0002kwonwizk4bbl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/MAC/others/chrome-cannot-upgrade-automatically/" data-id="cjc5px0440002iaonp7lbka3f" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -922,7 +1064,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/MAC/others/chrome-cannot-upgrade-automatically/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/others/chrome-cannot-upgrade-automatically/">Comments</a>
+        <a href="https://zlargon.github.io/blog/MAC/others/chrome-cannot-upgrade-automatically/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/MAC/others/chrome-cannot-upgrade-automatically/">Comments</a>
     
 
         </footer>
@@ -973,11 +1115,11 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/iOS/others/ios-undeletable-photos/iPhoto.png" alt="iPhoto" title="iPhoto">
+            <img src="/blog/iOS/others/ios-undeletable-photos/iPhoto.png" title="iPhoto">
 <p>在 iPhone 裡面有某些相簿的照片是無法直接刪除的</p>
 <p>當我們點進去這些照片時，除了 <code>&quot;編輯&quot;</code> 和 <code>&quot;分享&quot;</code> 之外，根本找不到 <code>&quot;刪除&quot;</code></p>
 <p>這個問題困惑了很多人，其中也包括過去的我</p>
-<img src="/blog/iOS/others/ios-undeletable-photos/undeletable.png" alt="照片無法刪除" title="照片無法刪除">
+<img src="/blog/iOS/others/ios-undeletable-photos/undeletable.png" title="照片無法刪除">
 <p>這些無法刪除的照片，可以分為兩類，刪除的方式不同：</p>
 <ul>
 <li><strong>照片串流</strong>：可以直接從 iPhone 刪除</li>
@@ -985,7 +1127,7 @@ ga('send', 'pageview');
 </ul>
 <hr>
 <h1 id="1-刪除「照片串流」"><a href="#1-刪除「照片串流」" class="headerlink" title="1. 刪除「照片串流」"></a>1. 刪除「照片串流」</h1><p>開啟 iPhone 設定 &gt; 點選 <code>iCloud</code> &gt; 點選 <code>iPhoto</code> &gt; 關閉<code>「照片串流」</code></p>
-<img src="/blog/iOS/others/ios-undeletable-photos/remove_stream_photo.png" alt="刪除「照片串流」" title="刪除「照片串流」">
+<img src="/blog/iOS/others/ios-undeletable-photos/remove_stream_photo.png" title="刪除「照片串流」">
 <p><br></p>
 <h1 id="2-刪除「事件相簿」"><a href="#2-刪除「事件相簿」" class="headerlink" title="2. 刪除「事件相簿」"></a>2. 刪除「事件相簿」</h1><ol>
 <li><p>完全關閉 iPhone<code>「相簿 App」</code></p>
@@ -1001,7 +1143,7 @@ ga('send', 'pageview');
 <li><p>套用設定</p>
 </li>
 </ol>
-<img src="/blog/iOS/others/ios-undeletable-photos/remove_event_albums.png" alt="刪除「事件相簿」" title="刪除「事件相簿」">
+<img src="/blog/iOS/others/ios-undeletable-photos/remove_event_albums.png" title="刪除「事件相簿」">
 
         
         </div>
@@ -1012,7 +1154,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/iOS/others/ios-undeletable-photos/" data-id="cjc5e8dv2000ckwon5usogwmz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/iOS/others/ios-undeletable-photos/" data-id="cjc5px04i000biaongdrwxale" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1080,7 +1222,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/iOS/others/ios-undeletable-photos/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/iOS/others/ios-undeletable-photos/">Comments</a>
+        <a href="https://zlargon.github.io/blog/iOS/others/ios-undeletable-photos/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/iOS/others/ios-undeletable-photos/">Comments</a>
     
 
         </footer>
@@ -1131,20 +1273,20 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/MAC/others/avoid-launch-iphoto-and-itune/Photos.jpg" alt="Photos" title="Photos">
+            <img src="/blog/MAC/others/avoid-launch-iphoto-and-itune/Photos.jpg" title="Photos">
 <p>在開發 <code>iOS App</code> 的時候，每次只要 iPhone 一連接 Mac，就會自動跳出 iTunes, iPhoto</p>
 <p>每次插拔後重新接上又跳出來，非常的不方便</p>
 <p>尤其是當連接的是其他人的私人手機 debug 時，就會不小心從 iPhoto 看到別人的照片</p>
 <p>有的時候還挺尷尬的…</p>
 <p><br></p>
 <h1 id="1-iTunes"><a href="#1-iTunes" class="headerlink" title="1. iTunes"></a>1. iTunes</h1><p>開啟設定（<code>command + ,</code>）&gt; <code>裝置</code> &gt; 勾選 <code>&quot;避免 iPod、iPhone 和 iPad 自動同步&quot;</code></p>
-<img src="/blog/MAC/others/avoid-launch-iphoto-and-itune/iTunes_avoid.png" alt="避免自動開啟 iTunes" title="避免自動開啟 iTunes">
+<img src="/blog/MAC/others/avoid-launch-iphoto-and-itune/iTunes_avoid.png" title="避免自動開啟 iTunes">
 <p><br></p>
 <h1 id="2-iPhoto"><a href="#2-iPhoto" class="headerlink" title="2. iPhoto"></a>2. iPhoto</h1><p>開啟設定（<code>command + ,</code>）&gt; <code>一般</code> &gt; 連接相機時開啟：選擇 <code>&quot;沒有應用程式&quot;</code></p>
-<img src="/blog/MAC/others/avoid-launch-iphoto-and-itune/iPhoto_avoid.png" alt="避免自動開啟 iPhoto" title="避免自動開啟 iPhoto">
+<img src="/blog/MAC/others/avoid-launch-iphoto-and-itune/iPhoto_avoid.png" title="避免自動開啟 iPhoto">
 <p><br></p>
 <h1 id="3-Photos（新版的-iPhoto？）"><a href="#3-Photos（新版的-iPhoto？）" class="headerlink" title="3. Photos（新版的 iPhoto？）"></a>3. Photos（新版的 iPhoto？）</h1><p>上方選擇 <code>輸入</code> &gt; 取消 <code>&quot;為此裝置打開「照片」&quot;</code></p>
-<img src="/blog/MAC/others/avoid-launch-iphoto-and-itune/Photos_avoid.png" alt="避免自動開啟 Photos" title="避免自動開啟 Photos">
+<img src="/blog/MAC/others/avoid-launch-iphoto-and-itune/Photos_avoid.png" title="避免自動開啟 Photos">
 <p><br></p>
 <hr>
 <p><br></p>
@@ -1158,7 +1300,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/avoid-launch-iphoto-and-itune/" data-id="cjc5e8dul0000kwon4voolztz" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/MAC/others/avoid-launch-iphoto-and-itune/" data-id="cjc5px0410000iaonr47p6q0x" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1226,276 +1368,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/MAC/others/avoid-launch-iphoto-and-itune/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/others/avoid-launch-iphoto-and-itune/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-mac-development-tools" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/blog/MAC/tools/mac-development-tools/">推薦的開發工具</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/blog/MAC/tools/mac-development-tools/">
-            <time datetime="2015-10-06T16:35:21.000Z" itemprop="datePublished">2015-10-06</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/blog/tags/SublimeText/">SublimeText</a>, <a class="tag-link" href="/blog/tags/TextWrangler/">TextWrangler</a>, <a class="tag-link" href="/blog/tags/Xcode/">Xcode</a>, <a class="tag-link" href="/blog/tags/brew/">brew</a>, <a class="tag-link" href="/blog/tags/git/">git</a>, <a class="tag-link" href="/blog/tags/iTerm2/">iTerm2</a>, <a class="tag-link" href="/blog/tags/repo/">repo</a>
-    </div>
-
-                </div>
-            </header>
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <p>由於我之前工作都是用 Mac 在做軟體開發，後來有滿多同事看我用得很順手</p>
-<p>後來都想買 Mac 來用看看 XD</p>
-<p>我個人非常推薦用 Mac 進行軟體開發工作</p>
-<p>像是我之前常常會跑台北參加各種開發者 Conference</p>
-<p>不論是演講者或是底下的開發者們，幾乎是人手一台 Mac</p>
-<p>Mac 的穩定性實在是令人非常驚豔，我覺得工作上沒什麼比穩定性還要更重要的了！</p>
-<p>這篇主要是寫給初次在 Mac 進行開發的人看的</p>
-<p>主要介紹是一些推薦的開發套件，以及一些提醒事項</p>
-<p><br></p>
-<table>
-<thead>
-<tr>
-<th>應用程式</th>
-<th>簡介</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Xcode</td>
-<td>開發 <code>Mac OSX</code>、<code>iOS App</code> 專用 IDE</td>
-</tr>
-<tr>
-<td>iTerm2</td>
-<td>神器等級的終端機</td>
-</tr>
-<tr>
-<td>brew</td>
-<td>安裝其他 <code>command line</code>，類似 <code>Ubuntu</code> 的 <code>apt-get</code></td>
-</tr>
-<tr>
-<td>git</td>
-<td>版本控制軟體</td>
-</tr>
-<tr>
-<td>repo</td>
-<td>版本控制軟體</td>
-</tr>
-<tr>
-<td>Sublime Text</td>
-<td>神器等級的文字編輯器</td>
-</tr>
-<tr>
-<td>TextWrangler</td>
-<td>很方便搜尋關鍵字的文字編輯器</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<img src="/blog/MAC/tools/mac-development-tools/xcode.png" alt="Xcode" title="Xcode">
-<h1 id="1-安裝-Xcode"><a href="#1-安裝-Xcode" class="headerlink" title="1. 安裝 Xcode"></a>1. 安裝 Xcode</h1><p>建議從 Mac App Store 下載：<a href="https://itunes.apple.com/tw/app/xcode/id497799835?l=zh&amp;mt=12" target="_blank" rel="external">https://itunes.apple.com/tw/app/xcode/id497799835?l=zh&amp;mt=12</a></p>
-<p>Xcode 是開發者必裝的軟體，包含了 IDE, <code>Command Line Tools</code>, <code>Clang Compiler</code>, …</p>
-<p>其實如果不想要 IDE 的話，也是可以直接到 Apple 開發者中心，直接下載 <code>Command Line Tools</code></p>
-<p>不過這裡是建議直接下載 Xcode，後續透過 Mac App Store 更新會比較方便</p>
-<p><br></p>
-<img src="/blog/MAC/tools/mac-development-tools/iterm2.png" alt="iTerm 2" title="iTerm 2">
-<h1 id="2-安裝-iTerm-2（★★★★★★）"><a href="#2-安裝-iTerm-2（★★★★★★）" class="headerlink" title="2. 安裝 iTerm 2（★★★★★★）"></a>2. 安裝 iTerm 2（★★★★★★）</h1><p>Mac 神器等級的終端機</p>
-<p>請參考這篇：<a href="http://zlargon.github.io/blog/MAC/tools/mac-terminal/">終端機 iTerm2 及設定 bash_profile</a></p>
-<p>內有圖文並茂的設定教學</p>
-<p><br></p>
-<h1 id="3-安裝-Home-Brew"><a href="#3-安裝-Home-Brew" class="headerlink" title="3. 安裝 Home Brew"></a>3. 安裝 Home Brew</h1><p>官方網站：<a href="http://brew.sh/" target="_blank" rel="external">http://brew.sh/</a></p>
-<p><code>brew</code> 的功能等同於 Ubuntu 上的 <code>apt-get</code></p>
-<p>在 <code>brew</code> 出現以前有 <code>MacPorts</code>，但是由於他的依賴關係做得不好，常常令人頭痛</p>
-<p>於是 <code>brew</code> 就出現了拯救了大家，後來就變成 Mac 上的主流</p>
-<p>安裝很簡單，只需要執行以下的 command line 即可</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></div></pre></td></tr></table></figure>
-<p>Mac 原廠設定有包含 Ruby, Python … 等大多數的開發套件，所以可以直接執行指令</p>
-<p><br></p>
-<img src="/blog/MAC/tools/mac-development-tools/git.png" alt="Git" title="Git">
-<h1 id="4-安裝-git"><a href="#4-安裝-git" class="headerlink" title="4. 安裝 git"></a>4. 安裝 git</h1><p>官方網站：<a href="https://git-scm.com/" target="_blank" rel="external">https://git-scm.com/</a></p>
-<p>現今主流的版本控制軟體，應該不用多作解釋吧 XD</p>
-<p>可以透過官方網站的 <code>.dmg</code> 來安裝，也可以透過 <code>brew</code> 來安裝</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install git</div></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="Git-Completion"><a href="#Git-Completion" class="headerlink" title="Git Completion"></a>Git Completion</h3><p>git 在 Linux 上預設就可以使用 tab 鍵自動完成指令</p>
-<p>但是 Mac 上預設卻沒有這個功能，必須要額外下載 git-completion.bash 的腳本</p>
-<p>我們可以從 git 的 github，找到 <a href="https://github.com/git/git/blob/master/contrib/completion/git-completion.bash" target="_blank" rel="external">git-completion.bash</a> 的腳本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 使用 curl 下載到 home 目錄，並且改名為 .git-completion.sh</span></div><div class="line">curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash &gt; ~/.git-completion.sh</div></pre></td></tr></table></figure>
-<p>接著修改 <code>~/.bash_profile</code> 新增以下內容，再重開終端機就行了</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># git bash completion</span></div><div class="line">[ <span class="_">-f</span> ~/.git-completion.sh ] &amp;&amp; . ~/.git-completion.sh</div></pre></td></tr></table></figure>
-<p><br></p>
-<h3 id="Mac-File-System-不分大小寫"><a href="#Mac-File-System-不分大小寫" class="headerlink" title="Mac File System 不分大小寫"></a>Mac File System 不分大小寫</h3><p>Linux 的 File System 會區分大小寫不同的檔案</p>
-<p>而 Mac 與 Windows 一樣，會將大小寫不同的檔案，視為同一個檔案</p>
-<p>之前有遇過 A 使用 Linux 平台開發，新增檔案 a123 跟 A123</p>
-<p>結果導致我在 Mac 要同步檔案的時候，發生錯誤，還弄了老半天</p>
-<p>所以這一定要特別注意</p>
-<p><br></p>
-<h3 id="git-在各平台的指令，會有些微的不同"><a href="#git-在各平台的指令，會有些微的不同" class="headerlink" title="git 在各平台的指令，會有些微的不同"></a>git 在各平台的指令，會有些微的不同</h3><p>例如說，在 Mac 要將檔案加入提交的時候</p>
-<p>已刪除的檔案，可以用 <code>git add &lt;removed_file&gt;</code></p>
-<p>但是在 Linux 上，必須要用 <code>git rm &lt;removed_file&gt;</code> 才能加入</p>
-<p>就只是要提醒，各平台的 git 指令會有一點點些微的不同</p>
-<p><br></p>
-<img src="/blog/MAC/tools/mac-development-tools/gerrit.png" alt="Gerrit Code Review" title="Gerrit Code Review">
-<h1 id="5-安裝-repo（搭配-Gerrit-使用）"><a href="#5-安裝-repo（搭配-Gerrit-使用）" class="headerlink" title="5. 安裝 repo（搭配 Gerrit 使用）"></a>5. 安裝 repo（搭配 Gerrit 使用）</h1><p>repo 官方網站：<a href="https://code.google.com/p/git-repo/" target="_blank" rel="external">https://code.google.com/p/git-repo/</a></p>
-<p>官方下載安裝教學：<a href="http://source.android.com/source/downloading.html#installing-repo" target="_blank" rel="external">http://source.android.com/source/downloading.html#installing-repo</a></p>
-<p>Google 為管理 Android 這種超大型的專案，於是基於 Git Server 開發出了 <a href="https://www.gerritcodereview.com/" target="_blank" rel="external">Gerrit</a> 系統</p>
-<p>可以有效率的將一個大專案拆成各個小專案，捨棄 git submodules，統一使用 manifest.xml 來管理</p>
-<p>可以減少很多不必要的 patch，例如 merge branch, commit, update submodules commit, … 等等</p>
-<p>開發者可以更專注於功能的開發，追縱 bug</p>
-<p>其 Code Review Web 介面，可以透過 <code>Change-Id</code> 追蹤每個 <code>patch</code> 的訂正情形</p>
-<p><br></p>
-<p><code>Repo</code> 是搭配 <code>Gerrit</code> 所誕生的工具，作為 <code>client</code> 端的 <code>command line</code></p>
-<p>目前最新版的 <code>repo</code> 是使用 <code>python</code> 寫的，由於 Mac 內建已經有安裝 <code>python 2.7.10</code> 所以可以直接執行</p>
-<p>（如果要在 <code>Windows</code> 執行 <code>repo</code>，必須要另外安裝 <code>python</code> 才能運行）</p>
-<p>以 <code>git</code> 的指令為基礎，封裝了 <code>git</code> 與 <code>Gerrit Server</code> 複雜的設定以及溝通的指令</p>
-<p>例如 <code>git pull</code>, <code>git push</code>, <code>git fetch</code> 等容易出錯，及設定錯誤的指令</p>
-<p>大部份的時候，只需要透過 <code>repo sync</code>, <code>repo upload</code> 即可完成同步、上傳程式碼</p>
-<p>執行以下 <code>command line</code> 即可將 <code>repo</code> 安裝到 <code>~/bin</code> 底下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p ~/bin</div><div class="line">curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo</div><div class="line">chmod a+x ~/bin/repo</div></pre></td></tr></table></figure>
-<p>新增路徑 <code>~/bin</code> 到 <code>bash_profile</code></p>
-<figure class="highlight bash"><figcaption><span>~/.bash_profile</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:~/bin</div></pre></td></tr></table></figure>
-<p><br></p>
-<p>使用 <code>repo sync</code> 指令時，他會去先下載 repo 一份最新的 source code，放到 <code>.repo/</code> 目錄底下</p>
-<p>他透過 <code>GPG</code> 去驗證 repo tag 的版本</p>
-<p>如果在 Mac 上使用 <code>repo</code> 發生 <code>GPG</code> 相關的錯誤訊息，請安裝 <code>GPG Tools</code></p>
-<img src="/blog/MAC/tools/mac-development-tools/gpg.png" alt="GPG Tools" title="GPG Tools">
-<p>官方網站：<a href="https://gpgtools.org/" target="_blank" rel="external">https://gpgtools.org/</a></p>
-<p>安裝好之後，他會要求你輸入信箱等等資訊，不用填，直接關掉就可以了</p>
-<p><br></p>
-<img src="/blog/MAC/tools/mac-development-tools/sublime_text.jpg" alt="Sublime Text 3" title="Sublime Text 3">
-<h1 id="6-Sublime-Text-3（★★★★★★）"><a href="#6-Sublime-Text-3（★★★★★★）" class="headerlink" title="6. Sublime Text 3（★★★★★★）"></a>6. Sublime Text 3（★★★★★★）</h1><p>官方網站：<a href="http://www.sublimetext.com/3" target="_blank" rel="external">http://www.sublimetext.com/3</a></p>
-<p>文字編輯超級神器，應該不用多作解釋吧 XD</p>
-<p><br></p>
-<h3 id="設定-Sublime-Command-Line"><a href="#設定-Sublime-Command-Line" class="headerlink" title="設定 Sublime Command Line"></a>設定 Sublime Command Line</h3><p><a href="https://www.sublimetext.com/docs/2/osx_command_line.html" target="_blank" rel="external">https://www.sublimetext.com/docs/2/osx_command_line.html</a></p>
-<p>可以直接透過 command line 用 sublime 開啟檔案</p>
-<p><br></p>
-<h3 id="安裝-Package-Control"><a href="#安裝-Package-Control" class="headerlink" title="安裝 Package Control"></a>安裝 Package Control</h3><p><a href="https://packagecontrol.io/installation#st3" target="_blank" rel="external">https://packagecontrol.io/installation#st3</a></p>
-<p>Sublime Text 有提供各式各樣的套件，可以很簡單的擴充</p>
-<p>例如，我個人經常會使用 Markdown 語法來編寫文件、寫網誌，就非常推薦套件 <strong><em>MarkdownLight</em></strong></p>
-<p>作者的 github：<a href="https://github.com/sekogan/MarkdownLight" target="_blank" rel="external">https://github.com/sekogan/MarkdownLight</a></p>
-<p>而 <strong><em>Babel</em></strong> 也有開發 sublime 的套件，可同時支援 ES5, ES6, JSX 的語法</p>
-<p>Babel 官方網址：<a href="https://babeljs.io/" target="_blank" rel="external">https://babeljs.io/</a></p>
-<p>Babel Github：<a href="https://github.com/babel/babel-sublime" target="_blank" rel="external">https://github.com/babel/babel-sublime</a></p>
-<p><br></p>
-<img src="/blog/MAC/tools/mac-development-tools/text_wrangler.png" alt="TextWrangler" title="TextWrangler">
-<h1 id="7-TextWrangler（★★★）"><a href="#7-TextWrangler（★★★）" class="headerlink" title="7. TextWrangler（★★★）"></a>7. TextWrangler（★★★）</h1><p>官方網站：<a href="http://www.barebones.com/products/textwrangler/" target="_blank" rel="external">http://www.barebones.com/products/textwrangler/</a></p>
-<p>建議從 Mac App Store 安裝：<a href="https://itunes.apple.com/tw/app/textwrangler/id404010395?mt=12" target="_blank" rel="external">https://itunes.apple.com/tw/app/textwrangler/id404010395?mt=12</a></p>
-<p>其實他是一個文字編輯器</p>
-<p>他對我來說 TextWrangler 最大的賣點是，他文內搜尋的介面做得很好</p>
-<p>在 debug 的時候，很適合在幾萬行的 log 裡面搜尋關鍵字</p>
-<p><strong><em>然而一份 log 會有幾萬行，這件事本身很可能就是一個 bug</em></strong></p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/mac-development-tools/" data-id="cjc5e8dv7000hkwon9xgojhad" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://zlargon.github.io/blog/blog/MAC/tools/mac-development-tools/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/tools/mac-development-tools/">Comments</a>
+        <a href="https://zlargon.github.io/blog/MAC/others/avoid-launch-iphoto-and-itune/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/MAC/others/avoid-launch-iphoto-and-itune/">Comments</a>
     
 
         </footer>
@@ -1506,7 +1379,7 @@ ga('send', 'pageview');
 
 
     <nav id="page-nav">
-        <a class="extend prev" rel="prev" href="/blog/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/3/">Next &raquo;</a>
+        <a class="extend prev" rel="prev" href="/blog/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><a class="extend next" rel="next" href="/blog/page/3/">Next &raquo;</a>
     </nav>
 </section>
             
@@ -1521,18 +1394,37 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/MAC/tools/install-redmine-on-mac/" class="thumbnail">
+                            <a href="/blog/Redmine/how-to-reset-password-in-redmine/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/MAC/tools/install-redmine-on-mac/redmine.png)" alt="Install Redmine on Mac" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/Redmine/how-to-reset-password-in-redmine/redmine_cannot_login.png)" alt="How to Reset Password in Redmine" class="thumbnail-image"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a></p>
-                            <p class="item-title"><a href="/blog/MAC/tools/install-redmine-on-mac/" class="title">Install Redmine on Mac</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Redmine/">Redmine</a></p>
+                            <p class="item-title"><a href="/blog/Redmine/how-to-reset-password-in-redmine/" class="title">How to Reset Password in Redmine</a></p>
+                            <p class="item-date"><time datetime="2018-01-08T01:41:48.000Z" itemprop="datePublished">2018-01-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/Redmine/install-redmine-on-mac/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/Redmine/install-redmine-on-mac/redmine.png)" alt="Install Redmine on Mac" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Redmine/">Redmine</a></p>
+                            <p class="item-title"><a href="/blog/Redmine/install-redmine-on-mac/" class="title">Install Redmine on Mac</a></p>
                             <p class="item-date"><time datetime="2017-10-10T23:46:51.000Z" itemprop="datePublished">2017-10-10</time></p>
                         </div>
                     </li>
@@ -1594,25 +1486,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/blog/MAC/tools/record-both-system-audio-and-mic-input/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/blog/MAC/tools/record-both-system-audio-and-mic-input/sound_flower.png)" alt="Mac 同時收錄 電腦音源 + 麥克風音源" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a></p>
-                            <p class="item-title"><a href="/blog/MAC/tools/record-both-system-audio-and-mic-input/" class="title">Mac 同時收錄 電腦音源 + 麥克風音源</a></p>
-                            <p class="item-date"><time datetime="2016-08-19T04:45:48.000Z" itemprop="datePublished">2016-08-19</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1622,7 +1495,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/">MAC</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/others/">others</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/tools/">tools</a><span class="category-list-count">8</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/TOEFL/">TOEFL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/">iOS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/others/">others</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/misc/">misc</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/">MAC</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/others/">others</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/tools/">tools</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Redmine/">Redmine</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/TOEFL/">TOEFL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/">iOS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/others/">others</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/misc/">misc</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1631,7 +1504,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1640,7 +1513,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/blog/tags/Alfred/" style="font-size: 10px;">Alfred</a> <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/AppCleaner/" style="font-size: 10px;">AppCleaner</a> <a href="/blog/tags/BetterTouchTool/" style="font-size: 20px;">BetterTouchTool</a> <a href="/blog/tags/Camera/" style="font-size: 10px;">Camera</a> <a href="/blog/tags/CheatSheet/" style="font-size: 10px;">CheatSheet</a> <a href="/blog/tags/Chrome/" style="font-size: 20px;">Chrome</a> <a href="/blog/tags/Karabiner/" style="font-size: 20px;">Karabiner</a> <a href="/blog/tags/LadioCast/" style="font-size: 10px;">LadioCast</a> <a href="/blog/tags/Listchack/" style="font-size: 10px;">Listchack</a> <a href="/blog/tags/MAC/" style="font-size: 10px;">MAC</a> <a href="/blog/tags/Memory-Clean/" style="font-size: 10px;">Memory Clean</a> <a href="/blog/tags/Nally/" style="font-size: 10px;">Nally</a> <a href="/blog/tags/Parallels-Desktop/" style="font-size: 10px;">Parallels Desktop</a> <a href="/blog/tags/Photos/" style="font-size: 10px;">Photos</a> <a href="/blog/tags/Quick-Time/" style="font-size: 10px;">Quick Time</a> <a href="/blog/tags/RarGenie/" style="font-size: 10px;">RarGenie</a> <a href="/blog/tags/Redmine/" style="font-size: 10px;">Redmine</a> <a href="/blog/tags/Skim/" style="font-size: 10px;">Skim</a> <a href="/blog/tags/Skitch/" style="font-size: 10px;">Skitch</a> <a href="/blog/tags/Soundflower/" style="font-size: 10px;">Soundflower</a> <a href="/blog/tags/SublimeText/" style="font-size: 10px;">SublimeText</a> <a href="/blog/tags/TOEFL/" style="font-size: 20px;">TOEFL</a> <a href="/blog/tags/TeamViewer/" style="font-size: 10px;">TeamViewer</a> <a href="/blog/tags/TextWrangler/" style="font-size: 10px;">TextWrangler</a> <a href="/blog/tags/VLC/" style="font-size: 10px;">VLC</a> <a href="/blog/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/blog/tags/brew/" style="font-size: 10px;">brew</a> <a href="/blog/tags/git/" style="font-size: 10px;">git</a> <a href="/blog/tags/iPhoto/" style="font-size: 20px;">iPhoto</a> <a href="/blog/tags/iSight/" style="font-size: 10px;">iSight</a> <a href="/blog/tags/iTerm2/" style="font-size: 20px;">iTerm2</a> <a href="/blog/tags/iTunes/" style="font-size: 20px;">iTunes</a> <a href="/blog/tags/repo/" style="font-size: 10px;">repo</a> <a href="/blog/tags/中文輸入法/" style="font-size: 10px;">中文輸入法</a> <a href="/blog/tags/分類字彙/" style="font-size: 10px;">分類字彙</a> <a href="/blog/tags/加試/" style="font-size: 10px;">加試</a> <a href="/blog/tags/字神帝國/" style="font-size: 10px;">字神帝國</a> <a href="/blog/tags/惡意軟體/" style="font-size: 10px;">惡意軟體</a> <a href="/blog/tags/星期/" style="font-size: 10px;">星期</a> <a href="/blog/tags/曜日/" style="font-size: 10px;">曜日</a> <a href="/blog/tags/神話/" style="font-size: 10px;">神話</a> <a href="/blog/tags/行星/" style="font-size: 10px;">行星</a>
+            <a href="/blog/tags/Alfred/" style="font-size: 10px;">Alfred</a> <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/AppCleaner/" style="font-size: 10px;">AppCleaner</a> <a href="/blog/tags/BetterTouchTool/" style="font-size: 20px;">BetterTouchTool</a> <a href="/blog/tags/Camera/" style="font-size: 10px;">Camera</a> <a href="/blog/tags/CheatSheet/" style="font-size: 10px;">CheatSheet</a> <a href="/blog/tags/Chrome/" style="font-size: 20px;">Chrome</a> <a href="/blog/tags/Karabiner/" style="font-size: 20px;">Karabiner</a> <a href="/blog/tags/LadioCast/" style="font-size: 10px;">LadioCast</a> <a href="/blog/tags/Listchack/" style="font-size: 10px;">Listchack</a> <a href="/blog/tags/MAC/" style="font-size: 10px;">MAC</a> <a href="/blog/tags/Memory-Clean/" style="font-size: 10px;">Memory Clean</a> <a href="/blog/tags/Nally/" style="font-size: 10px;">Nally</a> <a href="/blog/tags/Parallels-Desktop/" style="font-size: 10px;">Parallels Desktop</a> <a href="/blog/tags/Photos/" style="font-size: 10px;">Photos</a> <a href="/blog/tags/Quick-Time/" style="font-size: 10px;">Quick Time</a> <a href="/blog/tags/RarGenie/" style="font-size: 10px;">RarGenie</a> <a href="/blog/tags/Redmine/" style="font-size: 20px;">Redmine</a> <a href="/blog/tags/Skim/" style="font-size: 10px;">Skim</a> <a href="/blog/tags/Skitch/" style="font-size: 10px;">Skitch</a> <a href="/blog/tags/Soundflower/" style="font-size: 10px;">Soundflower</a> <a href="/blog/tags/SublimeText/" style="font-size: 10px;">SublimeText</a> <a href="/blog/tags/TOEFL/" style="font-size: 20px;">TOEFL</a> <a href="/blog/tags/TeamViewer/" style="font-size: 10px;">TeamViewer</a> <a href="/blog/tags/TextWrangler/" style="font-size: 10px;">TextWrangler</a> <a href="/blog/tags/VLC/" style="font-size: 10px;">VLC</a> <a href="/blog/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/blog/tags/brew/" style="font-size: 10px;">brew</a> <a href="/blog/tags/git/" style="font-size: 10px;">git</a> <a href="/blog/tags/iPhoto/" style="font-size: 20px;">iPhoto</a> <a href="/blog/tags/iSight/" style="font-size: 10px;">iSight</a> <a href="/blog/tags/iTerm2/" style="font-size: 20px;">iTerm2</a> <a href="/blog/tags/iTunes/" style="font-size: 20px;">iTunes</a> <a href="/blog/tags/repo/" style="font-size: 10px;">repo</a> <a href="/blog/tags/中文輸入法/" style="font-size: 10px;">中文輸入法</a> <a href="/blog/tags/分類字彙/" style="font-size: 10px;">分類字彙</a> <a href="/blog/tags/加試/" style="font-size: 10px;">加試</a> <a href="/blog/tags/字神帝國/" style="font-size: 10px;">字神帝國</a> <a href="/blog/tags/惡意軟體/" style="font-size: 10px;">惡意軟體</a> <a href="/blog/tags/星期/" style="font-size: 10px;">星期</a> <a href="/blog/tags/曜日/" style="font-size: 10px;">曜日</a> <a href="/blog/tags/神話/" style="font-size: 10px;">神話</a> <a href="/blog/tags/行星/" style="font-size: 10px;">行星</a>
         </div>
     </div>
 

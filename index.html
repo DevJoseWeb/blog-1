@@ -9,6 +9,7 @@
 <meta property="og:title" content="zlargon">
 <meta property="og:url" content="https://zlargon.github.io/blog/index.html">
 <meta property="og:site_name" content="zlargon">
+<meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zlargon">
     
@@ -159,7 +160,7 @@ ga('send', 'pageview');
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                18
+                19
                 <span>posts</span>
             </div>
             <div class="article-info-block">
@@ -194,7 +195,7 @@ ga('send', 'pageview');
 
             
             <section id="main">
-    <article id="post-install-redmine-on-mac" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-how-to-reset-password-in-redmine" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -203,7 +204,7 @@ ga('send', 'pageview');
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/blog/MAC/tools/install-redmine-on-mac/">Install Redmine on Mac</a>
+            <a class="article-title" href="/blog/Redmine/how-to-reset-password-in-redmine/">How to Reset Password in Redmine</a>
         </h1>
     
 
@@ -211,8 +212,8 @@ ga('send', 'pageview');
                     
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/blog/MAC/tools/install-redmine-on-mac/">
-            <time datetime="2017-10-10T23:46:51.000Z" itemprop="datePublished">2017-10-10</time>
+        <a href="/blog/Redmine/how-to-reset-password-in-redmine/">
+            <time datetime="2018-01-08T01:41:48.000Z" itemprop="datePublished">2018-01-07</time>
         </a>
     </div>
 
@@ -220,7 +221,7 @@ ga('send', 'pageview');
                     
     <div class="article-category">
     	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a>
+        <a class="article-category-link" href="/blog/categories/Redmine/">Redmine</a>
     </div>
 
                     
@@ -235,25 +236,17 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/MAC/tools/install-redmine-on-mac/redmine.png" alt="redmine" title="redmine">
-<h2 id="1-Install-Brew-amp-Git"><a href="#1-Install-Brew-amp-Git" class="headerlink" title="1. Install Brew &amp; Git"></a>1. Install Brew &amp; Git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Brew</div><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div><div class="line"> </div><div class="line"># Git</div><div class="line">brew install git</div></pre></td></tr></table></figure>
-<h2 id="2-Install-and-Setup-MySQL-5-7-19"><a href="#2-Install-and-Setup-MySQL-5-7-19" class="headerlink" title="2. Install and Setup MySQL (5.7.19)"></a>2. Install and Setup MySQL (5.7.19)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mysql</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysqladmin -u root password &#123;yourpassword&#125;</div><div class="line">mysql -u root -p     <span class="comment"># login MySQL with password</span></div></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> redmine <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'redmine'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'my_password'</span>;</div><div class="line"><span class="keyword">GRANT</span> ALL <span class="keyword">PRIVILEGES</span> <span class="keyword">ON</span> redmine.* <span class="keyword">TO</span> <span class="string">'redmine'</span>@<span class="string">'localhost'</span>;</div></pre></td></tr></table></figure>
-<h2 id="3-Download-and-Setup-Redmine-3-4-2"><a href="#3-Download-and-Setup-Redmine-3-4-2" class="headerlink" title="3. Download and Setup Redmine (3.4.2)"></a>3. Download and Setup Redmine (3.4.2)</h2><ul>
-<li><p><a href="http://www.redmine.org/releases/redmine-3.4.2.tar.gz" target="_blank" rel="external">redmine-3.4.2.tar.gz</a> (md5: 2980b80e9acc81c01c06adb86eb4f37d)</p>
-</li>
-<li><p>Copy <code>config/database.yml.example</code> to <code>config/database.yml</code> and edit this file in order to configure your database settings for <code>production</code> environment.</p>
-</li>
-</ul>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">production:</span></div><div class="line"><span class="attr">  adapter:</span> mysql2</div><div class="line"><span class="attr">  database:</span> redmine</div><div class="line"><span class="attr">  host:</span> localhost</div><div class="line"><span class="attr">  port:</span> <span class="number">3307</span></div><div class="line"><span class="attr">  username:</span> root</div><div class="line"><span class="attr">  password:</span> &#123;yourpassword&#125;</div><div class="line"><span class="attr">  encoding:</span> utf8</div></pre></td></tr></table></figure>
-<h2 id="4-Run-Bundle"><a href="#4-Run-Bundle" class="headerlink" title="4. Run Bundle"></a>4. Run Bundle</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo gem install bundler</div><div class="line"> </div><div class="line"><span class="comment"># execute under redmine's folder</span></div><div class="line">bundle install --without development <span class="built_in">test</span></div><div class="line">bundle <span class="built_in">exec</span> rake generate_secret_token</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake db:migrate</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake redmine:load_default_data</div></pre></td></tr></table></figure>
-<h3 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting:"></a>Trouble Shooting:</h3><p>An error occurred while installing mysql2 (0.4.9), and Bundler cannot continue.<br>Make sure that <code>gem install mysql2 -v &#39;0.4.9&#39;</code> succeeds before bundling.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
-<h2 id="5-Start-Redmine"><a href="#5-Start-Redmine" class="headerlink" title="5. Start Redmine"></a>5. Start Redmine</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysql.server restart</div><div class="line">bundle <span class="built_in">exec</span> rails server webrick <span class="_">-e</span> production -p 5432  <span class="comment"># port 5432</span></div></pre></td></tr></table></figure>
+            <img src="/blog/Redmine/how-to-reset-password-in-redmine/redmine_cannot_login.png" title="Cannot Login">
+<h2 id="1-Login-MySQL-and-find-the-user-id"><a href="#1-Login-MySQL-and-find-the-user-id" class="headerlink" title="1. Login MySQL and find the user id"></a>1. Login MySQL and find the user id</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p             <span class="comment"># login MySQL</span></div><div class="line"> </div><div class="line">mysql&gt; use redmine;          <span class="comment"># choose redmine database</span></div><div class="line">mysql&gt; select * from users;  <span class="comment"># show all users' information</span></div></pre></td></tr></table></figure>
+<script src="https://asciinema.org/a/CVGxSJISAIqLaZReBchnuZsdX.js" id="asciicast-CVGxSJISAIqLaZReBchnuZsdX" async></script>
+
+<h2 id="2-Go-to-the-redmine-folder-and-change-the-password"><a href="#2-Go-to-the-redmine-folder-and-change-the-password" class="headerlink" title="2. Go to the redmine folder and change the password"></a>2. Go to the redmine folder and change the password</h2><figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># start console</span></div><div class="line">RAILS_ENV=production bundle exec rails c</div><div class="line"> </div><div class="line"><span class="comment"># find your user</span></div><div class="line">user = User.where(<span class="symbol">id:</span> <span class="number">1</span>).first</div><div class="line"> </div><div class="line"><span class="comment"># set new password</span></div><div class="line">user.password = <span class="string">'password'</span></div><div class="line">user.password_confirmation = <span class="string">'password'</span></div><div class="line"> </div><div class="line"><span class="comment"># save changes</span></div><div class="line">user.save!</div></pre></td></tr></table></figure>
+<script src="https://asciinema.org/a/wDJLeBmAEQBaZPWzLVGcieeu8.js" id="asciicast-wDJLeBmAEQBaZPWzLVGcieeu8" async></script>
+
+<h2 id="3-Login-redmine-and-change-the-password"><a href="#3-Login-redmine-and-change-the-password" class="headerlink" title="3. Login redmine and change the password"></a>3. Login redmine and change the password</h2><p>Now, you can login your account with password <code>password</code>, and then you can change your password in <strong>My Account</strong> page.</p>
+<img src="/blog/Redmine/how-to-reset-password-in-redmine/redmine_change_password.png" title="Change Password">
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
-<li><a href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank" rel="external">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a></li>
-<li><a href="http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer" target="_blank" rel="external">http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer</a></li>
+<li><a href="https://stackoverflow.com/a/30666786/2802074" target="_blank" rel="noopener">https://stackoverflow.com/a/30666786/2802074</a></li>
 </ul>
 
         
@@ -265,7 +258,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/install-redmine-on-mac/" data-id="cjc5e8dux0008kwonxkv0z0e4" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/Redmine/how-to-reset-password-in-redmine/" data-id="cjc5px04d0007iaonzv1y04ia" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -333,7 +326,156 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/MAC/tools/install-redmine-on-mac/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/tools/install-redmine-on-mac/">Comments</a>
+        <a href="https://zlargon.github.io/blog/Redmine/how-to-reset-password-in-redmine/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/Redmine/how-to-reset-password-in-redmine/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-install-redmine-on-mac" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/blog/Redmine/install-redmine-on-mac/">Install Redmine on Mac</a>
+        </h1>
+    
+
+                <div class="article-meta">
+                    
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/blog/Redmine/install-redmine-on-mac/">
+            <time datetime="2017-10-10T23:46:51.000Z" itemprop="datePublished">2017-10-10</time>
+        </a>
+    </div>
+
+
+                    
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/blog/categories/Redmine/">Redmine</a>
+    </div>
+
+                    
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/blog/tags/Redmine/">Redmine</a>
+    </div>
+
+                </div>
+            </header>
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <img src="/blog/Redmine/install-redmine-on-mac/redmine.png" title="redmine">
+<h2 id="1-Install-Brew-amp-Git"><a href="#1-Install-Brew-amp-Git" class="headerlink" title="1. Install Brew &amp; Git"></a>1. Install Brew &amp; Git</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"># Brew</div><div class="line">/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</div><div class="line"> </div><div class="line"># Git</div><div class="line">brew install git</div></pre></td></tr></table></figure>
+<h2 id="2-Install-and-Setup-MySQL-5-7-19"><a href="#2-Install-and-Setup-MySQL-5-7-19" class="headerlink" title="2. Install and Setup MySQL (5.7.19)"></a>2. Install and Setup MySQL (5.7.19)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mysql</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysqladmin -u root password &#123;yourpassword&#125;</div><div class="line">mysql -u root -p     <span class="comment"># login MySQL with password</span></div></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">CREATE</span> <span class="keyword">DATABASE</span> redmine <span class="built_in">CHARACTER</span> <span class="keyword">SET</span> utf8;</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'redmine'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'my_password'</span>;</div><div class="line"><span class="keyword">GRANT</span> ALL <span class="keyword">PRIVILEGES</span> <span class="keyword">ON</span> redmine.* <span class="keyword">TO</span> <span class="string">'redmine'</span>@<span class="string">'localhost'</span>;</div></pre></td></tr></table></figure>
+<h2 id="3-Download-and-Setup-Redmine-3-4-2"><a href="#3-Download-and-Setup-Redmine-3-4-2" class="headerlink" title="3. Download and Setup Redmine (3.4.2)"></a>3. Download and Setup Redmine (3.4.2)</h2><ul>
+<li><p><a href="http://www.redmine.org/releases/redmine-3.4.2.tar.gz" target="_blank" rel="noopener">redmine-3.4.2.tar.gz</a> (md5: 2980b80e9acc81c01c06adb86eb4f37d)</p>
+</li>
+<li><p>Copy <code>config/database.yml.example</code> to <code>config/database.yml</code> and edit this file in order to configure your database settings for <code>production</code> environment.</p>
+</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="attr">production:</span></div><div class="line"><span class="attr">  adapter:</span> mysql2</div><div class="line"><span class="attr">  database:</span> redmine</div><div class="line"><span class="attr">  host:</span> localhost</div><div class="line"><span class="attr">  port:</span> <span class="number">3307</span></div><div class="line"><span class="attr">  username:</span> root</div><div class="line"><span class="attr">  password:</span> &#123;yourpassword&#125;</div><div class="line"><span class="attr">  encoding:</span> utf8</div></pre></td></tr></table></figure>
+<h2 id="4-Run-Bundle"><a href="#4-Run-Bundle" class="headerlink" title="4. Run Bundle"></a>4. Run Bundle</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">sudo gem install bundler</div><div class="line"> </div><div class="line"><span class="comment"># execute under redmine's folder</span></div><div class="line">bundle install --without development <span class="built_in">test</span></div><div class="line">bundle <span class="built_in">exec</span> rake generate_secret_token</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake db:migrate</div><div class="line">RAILS_ENV=production bundle <span class="built_in">exec</span> rake redmine:load_default_data</div></pre></td></tr></table></figure>
+<h3 id="Trouble-Shooting"><a href="#Trouble-Shooting" class="headerlink" title="Trouble Shooting:"></a>Trouble Shooting:</h3><p>An error occurred while installing mysql2 (0.4.9), and Bundler cannot continue.<br>Make sure that <code>gem install mysql2 -v &#39;0.4.9&#39;</code> succeeds before bundling.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
+<h2 id="5-Start-Redmine"><a href="#5-Start-Redmine" class="headerlink" title="5. Start Redmine"></a>5. Start Redmine</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mysql.server restart</div><div class="line">bundle <span class="built_in">exec</span> rails server webrick <span class="_">-e</span> production -p 5432  <span class="comment"># port 5432</span></div></pre></td></tr></table></figure>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li><a href="http://www.redmine.org/projects/redmine/wiki/RedmineInstall" target="_blank" rel="noopener">http://www.redmine.org/projects/redmine/wiki/RedmineInstall</a></li>
+<li><a href="http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer" target="_blank" rel="noopener">http://www.redmine.org/projects/redmine/wiki/RedmineInstallOSXMavericksServer</a></li>
+</ul>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="https://zlargon.github.io/blog/Redmine/install-redmine-on-mac/" data-id="cjc5px04g000aiaoneksfzim6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="https://zlargon.github.io/blog/Redmine/install-redmine-on-mac/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/Redmine/install-redmine-on-mac/">Comments</a>
     
 
         </footer>
@@ -384,21 +526,21 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/MAC/others/mac-camera-not-works/there_is_no_connected_camera.jpg" alt="攝影機無法連接" title="攝影機無法連接">
+            <img src="/blog/MAC/others/mac-camera-not-works/there_is_no_connected_camera.jpg" title="攝影機無法連接">
 <p>我最近發現我的 Mac (OS X 10.11.6) 有時候攝影機會突然無法正常開啟<br>即使我已經將所有可能會使用攝影機的應用程式都關掉了，但是攝影機依然無法運行<br>直到我重開機之後，才會恢復正常</p>
 <p>後來我在 YouTube 找到了這個影片，才解決了我的問題<br><div class="video-container"><iframe src="//www.youtube.com/embed/P-6kTfqn-b8" frameborder="0" allowfullscreen></iframe></div></p>
 <p><br></p>
 <h2 id="解決方案"><a href="#解決方案" class="headerlink" title="解決方案"></a>解決方案</h2><p>在終端機輸入指令（注意英文大小寫）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo killall VDCAssistant</div></pre></td></tr></table></figure>
 <p><code>VDCAssistant</code>這個程序負責背景執行 Mac 的攝影機（iSight）<br>使用這個指令後，會把背景執行的<code>VDCAssistant</code>強制關掉，接著再次重新啟動</p>
-<img src="/blog/MAC/others/mac-camera-not-works/VDCAssistant.png" alt="VDCAssistant (點擊放大)" title="VDCAssistant (點擊放大)">
+<img src="/blog/MAC/others/mac-camera-not-works/VDCAssistant.png" title="VDCAssistant (點擊放大)">
 <p>這個指令必須要給予<code>管理員權限</code>，因此要在前面加上<code>sudo</code>，並且輸入密碼<br>否則他會顯示 <code>No matching processes belonging to you were found</code><br>如果沒設定過密碼的話，請直接按 <code>Enter</code></p>
 <p><strong>Note:</strong><br>影片中有附著，若上述指令無法作用的話，請改用以下指令</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo killall AppleCameraAssistant</div></pre></td></tr></table></figure>
 <p><br></p>
 <h2 id="指令介紹"><a href="#指令介紹" class="headerlink" title="指令介紹"></a>指令介紹</h2><p><code>sudo</code> - 使用管理員權限<br><code>killall &lt;PROCESS_NAME&gt;</code> - Kill All 顧名思義，砍掉所有名稱為 <code>&lt;PROCESS_NAME&gt;</code> 的程序</p>
 <h2 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h2><ul>
-<li><a href="https://youtu.be/P-6kTfqn-b8" target="_blank" rel="external">https://youtu.be/P-6kTfqn-b8</a></li>
+<li><a href="https://youtu.be/P-6kTfqn-b8" target="_blank" rel="noopener">https://youtu.be/P-6kTfqn-b8</a></li>
 </ul>
 
         
@@ -410,7 +552,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/mac-camera-not-works/" data-id="cjc5e8dv4000fkwonjtqjxq4a" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/MAC/others/mac-camera-not-works/" data-id="cjc5px04n000giaondd90xd4o" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -478,7 +620,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/MAC/others/mac-camera-not-works/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/others/mac-camera-not-works/">Comments</a>
+        <a href="https://zlargon.github.io/blog/MAC/others/mac-camera-not-works/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/MAC/others/mac-camera-not-works/">Comments</a>
     
 
         </footer>
@@ -529,8 +671,8 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/TOEFL/how-to-memorize-vocabulary/vocabulary.jpg" alt="Vocabularies" title="Vocabularies">
-<h1 id="背單字是一場與大腦的競賽"><a href="#背單字是一場與大腦的競賽" class="headerlink" title="背單字是一場與大腦的競賽"></a>背單字是一場與大腦的競賽</h1><img src="/blog/TOEFL/how-to-memorize-vocabulary/memory-model.jpg" alt="記憶模型" title="記憶模型">
+            <img src="/blog/TOEFL/how-to-memorize-vocabulary/vocabulary.jpg" title="Vocabularies">
+<h1 id="背單字是一場與大腦的競賽"><a href="#背單字是一場與大腦的競賽" class="headerlink" title="背單字是一場與大腦的競賽"></a>背單字是一場與大腦的競賽</h1><img src="/blog/TOEFL/how-to-memorize-vocabulary/memory-model.jpg" title="記憶模型">
 <p>單字總是背了又忘背了又忘，到底要怎樣才能把單字牢牢記住呢？</p>
 <p>然而，這一切都要回歸大腦對於記憶的運作原理</p>
 <p>人類大腦的記憶區分為<code>短期記憶區</code>以及<code>長期記憶區</code>。</p>
@@ -544,11 +686,11 @@ ga('send', 'pageview');
 <p>我們必須在大腦把這些單字忘掉之前，搶先把他移到<code>長期記憶區</code></p>
 <p>不過當然，我們是無法直接跟我們的大腦溝通的，那我們該怎麼做呢？</p>
 <hr>
-<h1 id="艾賓浩斯遺忘曲線"><a href="#艾賓浩斯遺忘曲線" class="headerlink" title="艾賓浩斯遺忘曲線"></a>艾賓浩斯遺忘曲線</h1><img src="/blog/TOEFL/how-to-memorize-vocabulary/forgetting_curve.jpg" alt="艾賓浩斯遺忘曲線" title="艾賓浩斯遺忘曲線">
+<h1 id="艾賓浩斯遺忘曲線"><a href="#艾賓浩斯遺忘曲線" class="headerlink" title="艾賓浩斯遺忘曲線"></a>艾賓浩斯遺忘曲線</h1><img src="/blog/TOEFL/how-to-memorize-vocabulary/forgetting_curve.jpg" title="艾賓浩斯遺忘曲線">
 <p>在 1876 年有一位德國心理學家艾賓浩斯（Hermann Ebbinghaus）為了研究記憶，開始了一段長達五年的實驗。</p>
 <p>在這一實驗中，艾賓浩斯使用了一些毫無意義的字母組合。通過記憶這些字母組合，並在一系列時間間隔後檢查遺忘率，得到了這一曲線。</p>
 <blockquote>
-<p>詳細內容請見維基百科：<a href="https://zh.wikipedia.org/wiki/遺忘曲線" target="_blank" rel="external">https://zh.wikipedia.org/wiki/遺忘曲線</a></p>
+<p>詳細內容請見維基百科：<a href="https://zh.wikipedia.org/wiki/遺忘曲線" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/遺忘曲線</a></p>
 </blockquote>
 <h3 id="實驗結果"><a href="#實驗結果" class="headerlink" title="實驗結果"></a>實驗結果</h3><table>
 <thead>
@@ -588,9 +730,9 @@ ga('send', 'pageview');
 <h3 id="遺忘曲線的應用-17-天背單字法"><a href="#遺忘曲線的應用-17-天背單字法" class="headerlink" title="遺忘曲線的應用 - 17 天背單字法"></a>遺忘曲線的應用 - 17 天背單字法</h3><p>根據這個實驗結果，有人提出了一種科學背單字的方法，號稱 “17天搞定GRE單詞”</p>
 <p>其理論基礎是根據艾賓浩斯遺忘曲線，每當快要忘記的時候去複習這個單字</p>
 <p>根據複習的週期：1 → 2 → 4 → 7 → 15 → 30 天 去複習單字，使得單字可以一直保存在大腦的記憶中</p>
-<img src="/blog/TOEFL/how-to-memorize-vocabulary/17days.png" alt="17 天背單字法" title="17 天背單字法">
+<img src="/blog/TOEFL/how-to-memorize-vocabulary/17days.png" title="17 天背單字法">
 <blockquote>
-<p>詳細內容：<a href="https://youtu.be/ApowCcsSla8" target="_blank" rel="external">https://youtu.be/ApowCcsSla8</a></p>
+<p>詳細內容：<a href="https://youtu.be/ApowCcsSla8" target="_blank" rel="noopener">https://youtu.be/ApowCcsSla8</a></p>
 </blockquote>
 <h3 id="遺忘曲線的謬誤"><a href="#遺忘曲線的謬誤" class="headerlink" title="遺忘曲線的謬誤"></a>遺忘曲線的謬誤</h3><p>事實上，遺忘曲線存在兩個謬誤，分別是<code>實驗對象</code>、<code>實驗樣本</code></p>
 <ol>
@@ -617,7 +759,7 @@ ga('send', 'pageview');
 <p>因為很重要，所以講三遍</p>
 <p>理解了基礎理論後，接下來的問題就是如何去實踐了！</p>
 <hr>
-<h1 id="1-理解單字-→-有效輸入大腦"><a href="#1-理解單字-→-有效輸入大腦" class="headerlink" title="1. 理解單字 → 有效輸入大腦"></a>1. 理解單字 → 有效輸入大腦</h1><img src="/blog/TOEFL/how-to-memorize-vocabulary/baicizhan.jpeg" alt="百詞斬" title="百詞斬">
+<h1 id="1-理解單字-→-有效輸入大腦"><a href="#1-理解單字-→-有效輸入大腦" class="headerlink" title="1. 理解單字 → 有效輸入大腦"></a>1. 理解單字 → 有效輸入大腦</h1><img src="/blog/TOEFL/how-to-memorize-vocabulary/baicizhan.jpeg" title="百詞斬">
 <p><strong><em>越容易理解的訊息，記憶效果會越好</em></strong></p>
 <p>背單字時，我們通常可以用字根、字首去拆解一個單字，使單字更容易被記下來</p>
 <p>例如，adapt、adept、adopt 三個很像的單字，只有差在一個母音不同</p>
@@ -637,7 +779,7 @@ ga('send', 'pageview');
 <p>因此在這裡推薦一個很棒 App 叫做 <code>百詞斬</code></p>
 <p>我之後會再開另外的寫一篇關於 <code>百詞斬</code> 的介紹</p>
 <hr>
-<h1 id="2-時間間隔式複習-→-有效複習"><a href="#2-時間間隔式複習-→-有效複習" class="headerlink" title="2. 時間間隔式複習 → 有效複習"></a>2. 時間間隔式複習 → 有效複習</h1><img src="/blog/TOEFL/how-to-memorize-vocabulary/anki.jpg" alt="Anki" title="Anki">
+<h1 id="2-時間間隔式複習-→-有效複習"><a href="#2-時間間隔式複習-→-有效複習" class="headerlink" title="2. 時間間隔式複習 → 有效複習"></a>2. 時間間隔式複習 → 有效複習</h1><img src="/blog/TOEFL/how-to-memorize-vocabulary/anki.jpg" title="Anki">
 <p><strong><em>間隔一段時間再複習，會比短時間內密集複習的效果還好</em></strong></p>
 <p>雖然我們已經了解這個理論了，但是實踐上卻是非常困難</p>
 <p>最簡單的實踐方式就是使用紙本的單字卡</p>
@@ -653,7 +795,7 @@ ga('send', 'pageview');
 <p>因此在這裡推薦一個很棒的單字卡 App 叫做 <code>Anki</code>，可以解決以上的問題</p>
 <p>我之後會再開另外的寫一篇關於 <code>Anki</code> 的介紹</p>
 <hr>
-<h1 id="3-背單字的順序-→-按照學科分類"><a href="#3-背單字的順序-→-按照學科分類" class="headerlink" title="3. 背單字的順序 → 按照學科分類"></a>3. 背單字的順序 → 按照學科分類</h1><img src="/blog/TOEFL/how-to-memorize-vocabulary/must_words_5600.jpg" alt="TOEFL iBT托福分類字彙" title="TOEFL iBT托福分類字彙">
+<h1 id="3-背單字的順序-→-按照學科分類"><a href="#3-背單字的順序-→-按照學科分類" class="headerlink" title="3. 背單字的順序 → 按照學科分類"></a>3. 背單字的順序 → 按照學科分類</h1><img src="/blog/TOEFL/how-to-memorize-vocabulary/must_words_5600.jpg" title="TOEFL iBT托福分類字彙">
 <p>我個人是建議剛開始不要按照 A-Z 的順序來背單字，會建議使用分類字彙的單字書</p>
 <p>按照 A-Z 的順序背，我曾經遇到以下的問題：</p>
 <ol>
@@ -667,7 +809,7 @@ ga('send', 'pageview');
 <p>在做 TPO 閱讀的時候，遇到看過的單字，又可以再加深對於單字的印象</p>
 <p>建議剛開始練 TPO 的時候，不要按照順序做，一樣是按照學科的分類去做</p>
 <p>我滿建議推薦這本單字書的 “TOEFL iBT托福分類字彙 5600字”</p>
-<p><a href="http://www.books.com.tw/products/0010593790" target="_blank" rel="external">http://www.books.com.tw/products/0010593790</a></p>
+<p><a href="http://www.books.com.tw/products/0010593790" target="_blank" rel="noopener">http://www.books.com.tw/products/0010593790</a></p>
 <p>建議是從考試比例最高的分類優先開始背：</p>
 <ul>
 <li>生命科學（動物、植物、生態、人體基因）</li>
@@ -677,9 +819,9 @@ ga('send', 'pageview');
 <li>人類學 &amp; 考古學</li>
 </ul>
 <h1 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h1><ul>
-<li><a href="http://www.baicizhan.com/app/article/60" target="_blank" rel="external">http://www.baicizhan.com/app/article/60</a></li>
-<li><a href="http://blog.chunnorris.cc/2015/09/anki-tutorial.html" target="_blank" rel="external">http://blog.chunnorris.cc/2015/09/anki-tutorial.html</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF" target="_blank" rel="external">https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF</a></li>
+<li><a href="http://www.baicizhan.com/app/article/60" target="_blank" rel="noopener">http://www.baicizhan.com/app/article/60</a></li>
+<li><a href="http://blog.chunnorris.cc/2015/09/anki-tutorial.html" target="_blank" rel="noopener">http://blog.chunnorris.cc/2015/09/anki-tutorial.html</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/%E9%81%97%E5%BF%98%E6%9B%B2%E7%BA%BF</a></li>
 </ul>
 
         
@@ -691,7 +833,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/TOEFL/how-to-memorize-vocabulary/" data-id="cjc5e8dus0006kwongnlhdf1e" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/TOEFL/how-to-memorize-vocabulary/" data-id="cjc5px0470005iaon17c89l4n" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -759,7 +901,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/TOEFL/how-to-memorize-vocabulary/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/TOEFL/how-to-memorize-vocabulary/">Comments</a>
+        <a href="https://zlargon.github.io/blog/TOEFL/how-to-memorize-vocabulary/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/TOEFL/how-to-memorize-vocabulary/">Comments</a>
     
 
         </footer>
@@ -810,7 +952,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/TOEFL/toefl-listening-plus-questions/toefl.gif" alt="TOEFL ETS" title="TOEFL ETS">
+            <img src="/blog/TOEFL/toefl-listening-plus-questions/toefl.gif" title="TOEFL ETS">
 <h1 id="第一套經典加試題"><a href="#第一套經典加試題" class="headerlink" title="第一套經典加試題"></a>第一套經典加試題</h1><h2 id="鳥類遷移-Bird-Migration-Conversation"><a href="#鳥類遷移-Bird-Migration-Conversation" class="headerlink" title="鳥類遷移 Bird Migration (Conversation)"></a>鳥類遷移 Bird Migration (Conversation)</h2><ol>
 <li><p><strong>Why does the man go to see his professer?</strong></p>
 <ul>
@@ -1009,7 +1151,7 @@ ga('send', 'pageview');
 </ol>
 <hr>
 <h1 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h1><ul>
-<li><a href="http://bbs.zhan.com/thread-77687-1-1.html" target="_blank" rel="external">http://bbs.zhan.com/thread-77687-1-1.html</a></li>
+<li><a href="http://bbs.zhan.com/thread-77687-1-1.html" target="_blank" rel="noopener">http://bbs.zhan.com/thread-77687-1-1.html</a></li>
 </ul>
 
         
@@ -1021,7 +1163,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/TOEFL/toefl-listening-plus-questions/" data-id="cjc5e8dvj0017kwonumi2yliy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/TOEFL/toefl-listening-plus-questions/" data-id="cjc5px0540019iaon4fx81y11" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1089,7 +1231,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/TOEFL/toefl-listening-plus-questions/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/TOEFL/toefl-listening-plus-questions/">Comments</a>
+        <a href="https://zlargon.github.io/blog/TOEFL/toefl-listening-plus-questions/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/TOEFL/toefl-listening-plus-questions/">Comments</a>
     
 
         </footer>
@@ -1140,7 +1282,7 @@ ga('send', 'pageview');
         <div class="article-entry" itemprop="articleBody">
         
             
-            <img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/sound_flower.png" alt="Soundflower" title="Soundflower">
+            <img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/sound_flower.png" title="Soundflower">
 <p>有時候我們想要錄製一些影片，除了自己麥克風的聲音之外，還想要同時收錄一些當時電腦發出的聲音</p>
 <p>但是我們在用 Quick Time 錄影時，只能選擇一種音源輸入，而不能同時選擇兩者</p>
 <p>因此我們要做就是，把 “麥克風音源” 和 “電腦音源” 混合成單一個音源，然後再導入 Quick Time</p>
@@ -1157,49 +1299,49 @@ ga('send', 'pageview');
 <td>Mac 內建影音播放 / 錄音 / 錄影軟體</td>
 </tr>
 <tr>
-<td><a href="https://github.com/mattingalls/Soundflower/releases" target="_blank" rel="external"><strong>Sound Flower（2.0b2）</strong></a></td>
+<td><a href="https://github.com/mattingalls/Soundflower/releases" target="_blank" rel="noopener"><strong>Sound Flower（2.0b2）</strong></a></td>
 <td>提供兩個虛擬音源（<code>2ch</code>、<code>64ch</code>）</td>
 </tr>
 <tr>
-<td><a href="https://itunes.apple.com/tw/app/ladiocast/id411213048" target="_blank" rel="external"><strong>Ladio Cast</strong></a></td>
+<td><a href="https://itunes.apple.com/tw/app/ladiocast/id411213048" target="_blank" rel="noopener"><strong>Ladio Cast</strong></a></td>
 <td>可將不同的音源混合輸出</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>Note:<br>網路上很多 <code>Sound Flower</code> 的版本已經過舊，在最新的 Mac 作業系統會無法運行，所以務必要到這裡提供的連結處下載最新版的 <code>Sound Flower</code><br><a href="https://github.com/mattingalls/Soundflower/releases" target="_blank" rel="external">https://github.com/mattingalls/Soundflower/releases</a></p>
+<p>Note:<br>網路上很多 <code>Sound Flower</code> 的版本已經過舊，在最新的 Mac 作業系統會無法運行，所以務必要到這裡提供的連結處下載最新版的 <code>Sound Flower</code><br><a href="https://github.com/mattingalls/Soundflower/releases" target="_blank" rel="noopener">https://github.com/mattingalls/Soundflower/releases</a></p>
 </blockquote>
 <h1 id="流程大綱"><a href="#流程大綱" class="headerlink" title="流程大綱"></a>流程大綱</h1><ol>
 <li>從內部 Mac 設定，將 <code>電腦音源</code> 導入虛擬音源 <code>Sound Flower (64ch)</code></li>
 <li>使用 Ladio Cast 進行混音，將 <code>麥克風</code> 和 <code>64ch</code> 都導入 <code>2ch</code></li>
 <li>在 Quick Time 錄音 / 錄影時，音源選擇虛擬音源 <code>Sound Flower (2ch)</code></li>
 </ol>
-<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/flow.png" alt="流程圖" title="流程圖">
+<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/flow.png" title="流程圖">
 <h1 id="設定步驟"><a href="#設定步驟" class="headerlink" title="設定步驟"></a>設定步驟</h1><p>安裝好 Sound Flower 後，電腦就會出現 <code>Sound Flower (64ch)</code> 跟 <code>Sound Flower (2ch)</code> 兩個虛擬音源；除此之外，桌面上方的工具列，也會出現 Sound Flower 的圖示。</p>
 <h2 id="1-將-Mac-音源輸出-導入-Sound-Flower-64ch"><a href="#1-將-Mac-音源輸出-導入-Sound-Flower-64ch" class="headerlink" title="1. 將 Mac 音源輸出 導入 Sound Flower (64ch)"></a>1. 將 Mac <code>音源輸出</code> 導入 <code>Sound Flower (64ch)</code></h2><p>開啟 Mac <code>系統偏好設定</code> &gt; <code>聲音</code> &gt; <code>輸出</code>，選擇輸出裝置 <code>Sound Flower (64ch)</code></p>
-<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/audio_preference.png" alt="聲音設定" title="聲音設定">
-<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/audio_preference_output_64ch.png" alt="設定虛擬音源 64 ch" title="設定虛擬音源 64 ch">
+<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/audio_preference.png" title="聲音設定">
+<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/audio_preference_output_64ch.png" title="設定虛擬音源 64 ch">
 <p>此後虛擬音源 <code>64ch</code> 就等同於是 <code>電腦音源</code></p>
 <blockquote>
 <p>Note:<br>記得要把聲音調到最大，否則錄到的聲音會很小聲</p>
 </blockquote>
 <h2 id="2-設定-Sound-Flower"><a href="#2-設定-Sound-Flower" class="headerlink" title="2. 設定 Sound Flower"></a>2. 設定 Sound Flower</h2><p>開啟桌面上方工具列的 Sound Flower 圖示，將 <code>2ch</code> 設為 <code>None (OFF)</code>，將 64ch 設為 <code>Built-in Output</code>。</p>
-<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/soundflower_setting.png" alt="設定 Sound Flower" title="設定 Sound Flower">
+<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/soundflower_setting.png" title="設定 Sound Flower">
 <h2 id="3-設定-Ladio-Cast"><a href="#3-設定-Ladio-Cast" class="headerlink" title="3. 設定 Ladio Cast"></a>3. 設定 Ladio Cast</h2><p>使用 Ladio Cast 進行混音，將 <code>麥克風</code>、<code>64ch</code> 都導入 <code>2ch</code></p>
 <ul>
 <li>將 <code>Input 1</code> 設為 <code>Built-in Microphone</code>（麥克風音源）</li>
 <li>將 <code>Input 2</code> 設為 <code>Sound Flower (64ch)</code></li>
 <li>將 <code>Main Output</code> 設為 <code>Sound Flower (2ch)</code></li>
 </ul>
-<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/ladiocast_setting.png" alt="設定 Ladio Cast" title="設定 Ladio Cast">
+<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/ladiocast_setting.png" title="設定 Ladio Cast">
 <h2 id="4-設定-Quick-Time-音源為-Sound-Flower-2ch"><a href="#4-設定-Quick-Time-音源為-Sound-Flower-2ch" class="headerlink" title="4. 設定 Quick Time 音源為 Sound Flower (2ch)"></a>4. 設定 Quick Time 音源為 <code>Sound Flower (2ch)</code></h2><p>最後，只要將 Quick Time 或是其他錄音軟體的音源，設為 <code>Sound Flower (2ch)</code> 就大功告成了</p>
-<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/quicktime_input_audio.png" alt="設定 Quick Time 音源" title="設定 Quick Time 音源">
+<img src="/blog/MAC/tools/record-both-system-audio-and-mic-input/quicktime_input_audio.png" title="設定 Quick Time 音源">
 <blockquote>
 <p>Note:<br>平常沒有要錄音的時候，記得將 “第一步驟” 的音源輸出設回原本的預設設定 (<code>內建揚聲器</code>or<code>耳機</code>)，否則電腦會沒有聲音</p>
 </blockquote>
 <h1 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h1><ul>
-<li><a href="https://youtu.be/lB9Ovqk5H5c" target="_blank" rel="external">https://youtu.be/lB9Ovqk5H5c</a></li>
-<li><a href="http://k-tsubo.com/mac/4582/" target="_blank" rel="external">http://k-tsubo.com/mac/4582/</a></li>
+<li><a href="https://youtu.be/lB9Ovqk5H5c" target="_blank" rel="noopener">https://youtu.be/lB9Ovqk5H5c</a></li>
+<li><a href="http://k-tsubo.com/mac/4582/" target="_blank" rel="noopener">http://k-tsubo.com/mac/4582/</a></li>
 </ul>
 
         
@@ -1211,7 +1353,7 @@ ga('send', 'pageview');
 
 </div>
 
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/tools/record-both-system-audio-and-mic-input/" data-id="cjc5e8dvg000ukwontn291rlg" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="https://zlargon.github.io/blog/MAC/tools/record-both-system-audio-and-mic-input/" data-id="cjc5px04y000tiaonwp0vgiwl" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1279,148 +1421,7 @@ ga('send', 'pageview');
 
             
     
-        <a href="https://zlargon.github.io/blog/blog/MAC/tools/record-both-system-audio-and-mic-input/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/tools/record-both-system-audio-and-mic-input/">Comments</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-selection-box-of-chinese-input-method-is-missing" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">中文輸入法選字框 無法顯示</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">
-            <time datetime="2016-06-24T13:07:10.000Z" itemprop="datePublished">2016-06-24</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/others/">others</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/blog/tags/中文輸入法/">中文輸入法</a>
-    </div>
-
-                </div>
-            </header>
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <img src="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/osx_logo.jpg" alt="OS X" title="OS X">
-<p>自從我的 MAC OSX 升級到 10.11 之後，就常常會遇到中文輸入法選字框消失的情形<br>只能靠重開機來修復，還滿煩的</p>
-<p>我後來有拍影片傳到 Youtube，也有在 Apple 社群發問，終於遇到好心人回覆了<br>ya~ 終於不用再一直重開機了 ^0^</p>
-<h2 id="解決方案"><a href="#解決方案" class="headerlink" title="解決方案"></a>解決方案</h2><p>在終端機輸入 <code>killall TCIM</code></p>
-<img src="/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/TCIM.png" alt="TCIM" title="TCIM">
-<p>這個指令把背景執行的<code>TCIM</code>（中文輸入法）的程序關掉<br>當作業系統發現 <code>TCIM</code> 不見之後，就會強迫重新啟動 <code>TCIM</code>，這時候選字框就回來了</p>
-<h2 id="影片連結"><a href="#影片連結" class="headerlink" title="影片連結"></a>影片連結</h2><div class="video-container"><iframe src="//www.youtube.com/embed/m_f44XGfDXw" frameborder="0" allowfullscreen></iframe></div>
-<p><br></p>
-<h2 id="參考連結"><a href="#參考連結" class="headerlink" title="參考連結"></a>參考連結</h2><ul>
-<li><a href="http://blog.tenyi.com/2015/10/mac-os-x-ei-capitan.html" target="_blank" rel="external">http://blog.tenyi.com/2015/10/mac-os-x-ei-capitan.html</a></li>
-<li><a href="https://discussionschinese.apple.com/thread/73381" target="_blank" rel="external">https://discussionschinese.apple.com/thread/73381</a></li>
-</ul>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/" data-id="cjc5e8dvi0011kwonc3edyjzk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/blog/MAC/others/selection-box-of-chinese-input-method-is-missing/">Comments</a>
+        <a href="https://zlargon.github.io/blog/MAC/tools/record-both-system-audio-and-mic-input/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="https://zlargon.github.io/blog/MAC/tools/record-both-system-audio-and-mic-input/">Comments</a>
     
 
         </footer>
@@ -1431,7 +1432,7 @@ ga('send', 'pageview');
 
 
     <nav id="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="extend next" rel="next" href="/blog/page/2/">Next &raquo;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><a class="extend next" rel="next" href="/blog/page/2/">Next &raquo;</a>
     </nav>
 </section>
             
@@ -1446,18 +1447,37 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/blog/MAC/tools/install-redmine-on-mac/" class="thumbnail">
+                            <a href="/blog/Redmine/how-to-reset-password-in-redmine/" class="thumbnail">
     
     
-        <span style="background-image:url(/blog/MAC/tools/install-redmine-on-mac/redmine.png)" alt="Install Redmine on Mac" class="thumbnail-image"></span>
+        <span style="background-image:url(/blog/Redmine/how-to-reset-password-in-redmine/redmine_cannot_login.png)" alt="How to Reset Password in Redmine" class="thumbnail-image"></span>
     
 </a>
 
                         </div>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a></p>
-                            <p class="item-title"><a href="/blog/MAC/tools/install-redmine-on-mac/" class="title">Install Redmine on Mac</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Redmine/">Redmine</a></p>
+                            <p class="item-title"><a href="/blog/Redmine/how-to-reset-password-in-redmine/" class="title">How to Reset Password in Redmine</a></p>
+                            <p class="item-date"><time datetime="2018-01-08T01:41:48.000Z" itemprop="datePublished">2018-01-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/blog/Redmine/install-redmine-on-mac/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/blog/Redmine/install-redmine-on-mac/redmine.png)" alt="Install Redmine on Mac" class="thumbnail-image"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/blog/categories/Redmine/">Redmine</a></p>
+                            <p class="item-title"><a href="/blog/Redmine/install-redmine-on-mac/" class="title">Install Redmine on Mac</a></p>
                             <p class="item-date"><time datetime="2017-10-10T23:46:51.000Z" itemprop="datePublished">2017-10-10</time></p>
                         </div>
                     </li>
@@ -1519,25 +1539,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/blog/MAC/tools/record-both-system-audio-and-mic-input/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/blog/MAC/tools/record-both-system-audio-and-mic-input/sound_flower.png)" alt="Mac 同時收錄 電腦音源 + 麥克風音源" class="thumbnail-image"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/blog/categories/MAC/">MAC</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/blog/categories/MAC/tools/">tools</a></p>
-                            <p class="item-title"><a href="/blog/MAC/tools/record-both-system-audio-and-mic-input/" class="title">Mac 同時收錄 電腦音源 + 麥克風音源</a></p>
-                            <p class="item-date"><time datetime="2016-08-19T04:45:48.000Z" itemprop="datePublished">2016-08-19</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1547,7 +1548,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/">MAC</a><span class="category-list-count">14</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/others/">others</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/tools/">tools</a><span class="category-list-count">8</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/TOEFL/">TOEFL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/">iOS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/others/">others</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/misc/">misc</a><span class="category-list-count">1</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/">MAC</a><span class="category-list-count">13</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/others/">others</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/MAC/tools/">tools</a><span class="category-list-count">7</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Redmine/">Redmine</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/TOEFL/">TOEFL</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/">iOS</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/iOS/others/">others</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/misc/">misc</a><span class="category-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1556,7 +1557,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/01/">January 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/10/">October 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/09/">September 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2016/04/">April 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/12/">December 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/10/">October 2015</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -1565,7 +1566,7 @@ ga('send', 'pageview');
     <div class="widget-wrap">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/blog/tags/Alfred/" style="font-size: 10px;">Alfred</a> <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/AppCleaner/" style="font-size: 10px;">AppCleaner</a> <a href="/blog/tags/BetterTouchTool/" style="font-size: 20px;">BetterTouchTool</a> <a href="/blog/tags/Camera/" style="font-size: 10px;">Camera</a> <a href="/blog/tags/CheatSheet/" style="font-size: 10px;">CheatSheet</a> <a href="/blog/tags/Chrome/" style="font-size: 20px;">Chrome</a> <a href="/blog/tags/Karabiner/" style="font-size: 20px;">Karabiner</a> <a href="/blog/tags/LadioCast/" style="font-size: 10px;">LadioCast</a> <a href="/blog/tags/Listchack/" style="font-size: 10px;">Listchack</a> <a href="/blog/tags/MAC/" style="font-size: 10px;">MAC</a> <a href="/blog/tags/Memory-Clean/" style="font-size: 10px;">Memory Clean</a> <a href="/blog/tags/Nally/" style="font-size: 10px;">Nally</a> <a href="/blog/tags/Parallels-Desktop/" style="font-size: 10px;">Parallels Desktop</a> <a href="/blog/tags/Photos/" style="font-size: 10px;">Photos</a> <a href="/blog/tags/Quick-Time/" style="font-size: 10px;">Quick Time</a> <a href="/blog/tags/RarGenie/" style="font-size: 10px;">RarGenie</a> <a href="/blog/tags/Redmine/" style="font-size: 10px;">Redmine</a> <a href="/blog/tags/Skim/" style="font-size: 10px;">Skim</a> <a href="/blog/tags/Skitch/" style="font-size: 10px;">Skitch</a> <a href="/blog/tags/Soundflower/" style="font-size: 10px;">Soundflower</a> <a href="/blog/tags/SublimeText/" style="font-size: 10px;">SublimeText</a> <a href="/blog/tags/TOEFL/" style="font-size: 20px;">TOEFL</a> <a href="/blog/tags/TeamViewer/" style="font-size: 10px;">TeamViewer</a> <a href="/blog/tags/TextWrangler/" style="font-size: 10px;">TextWrangler</a> <a href="/blog/tags/VLC/" style="font-size: 10px;">VLC</a> <a href="/blog/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/blog/tags/brew/" style="font-size: 10px;">brew</a> <a href="/blog/tags/git/" style="font-size: 10px;">git</a> <a href="/blog/tags/iPhoto/" style="font-size: 20px;">iPhoto</a> <a href="/blog/tags/iSight/" style="font-size: 10px;">iSight</a> <a href="/blog/tags/iTerm2/" style="font-size: 20px;">iTerm2</a> <a href="/blog/tags/iTunes/" style="font-size: 20px;">iTunes</a> <a href="/blog/tags/repo/" style="font-size: 10px;">repo</a> <a href="/blog/tags/中文輸入法/" style="font-size: 10px;">中文輸入法</a> <a href="/blog/tags/分類字彙/" style="font-size: 10px;">分類字彙</a> <a href="/blog/tags/加試/" style="font-size: 10px;">加試</a> <a href="/blog/tags/字神帝國/" style="font-size: 10px;">字神帝國</a> <a href="/blog/tags/惡意軟體/" style="font-size: 10px;">惡意軟體</a> <a href="/blog/tags/星期/" style="font-size: 10px;">星期</a> <a href="/blog/tags/曜日/" style="font-size: 10px;">曜日</a> <a href="/blog/tags/神話/" style="font-size: 10px;">神話</a> <a href="/blog/tags/行星/" style="font-size: 10px;">行星</a>
+            <a href="/blog/tags/Alfred/" style="font-size: 10px;">Alfred</a> <a href="/blog/tags/Android/" style="font-size: 10px;">Android</a> <a href="/blog/tags/AppCleaner/" style="font-size: 10px;">AppCleaner</a> <a href="/blog/tags/BetterTouchTool/" style="font-size: 20px;">BetterTouchTool</a> <a href="/blog/tags/Camera/" style="font-size: 10px;">Camera</a> <a href="/blog/tags/CheatSheet/" style="font-size: 10px;">CheatSheet</a> <a href="/blog/tags/Chrome/" style="font-size: 20px;">Chrome</a> <a href="/blog/tags/Karabiner/" style="font-size: 20px;">Karabiner</a> <a href="/blog/tags/LadioCast/" style="font-size: 10px;">LadioCast</a> <a href="/blog/tags/Listchack/" style="font-size: 10px;">Listchack</a> <a href="/blog/tags/MAC/" style="font-size: 10px;">MAC</a> <a href="/blog/tags/Memory-Clean/" style="font-size: 10px;">Memory Clean</a> <a href="/blog/tags/Nally/" style="font-size: 10px;">Nally</a> <a href="/blog/tags/Parallels-Desktop/" style="font-size: 10px;">Parallels Desktop</a> <a href="/blog/tags/Photos/" style="font-size: 10px;">Photos</a> <a href="/blog/tags/Quick-Time/" style="font-size: 10px;">Quick Time</a> <a href="/blog/tags/RarGenie/" style="font-size: 10px;">RarGenie</a> <a href="/blog/tags/Redmine/" style="font-size: 20px;">Redmine</a> <a href="/blog/tags/Skim/" style="font-size: 10px;">Skim</a> <a href="/blog/tags/Skitch/" style="font-size: 10px;">Skitch</a> <a href="/blog/tags/Soundflower/" style="font-size: 10px;">Soundflower</a> <a href="/blog/tags/SublimeText/" style="font-size: 10px;">SublimeText</a> <a href="/blog/tags/TOEFL/" style="font-size: 20px;">TOEFL</a> <a href="/blog/tags/TeamViewer/" style="font-size: 10px;">TeamViewer</a> <a href="/blog/tags/TextWrangler/" style="font-size: 10px;">TextWrangler</a> <a href="/blog/tags/VLC/" style="font-size: 10px;">VLC</a> <a href="/blog/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/blog/tags/brew/" style="font-size: 10px;">brew</a> <a href="/blog/tags/git/" style="font-size: 10px;">git</a> <a href="/blog/tags/iPhoto/" style="font-size: 20px;">iPhoto</a> <a href="/blog/tags/iSight/" style="font-size: 10px;">iSight</a> <a href="/blog/tags/iTerm2/" style="font-size: 20px;">iTerm2</a> <a href="/blog/tags/iTunes/" style="font-size: 20px;">iTunes</a> <a href="/blog/tags/repo/" style="font-size: 10px;">repo</a> <a href="/blog/tags/中文輸入法/" style="font-size: 10px;">中文輸入法</a> <a href="/blog/tags/分類字彙/" style="font-size: 10px;">分類字彙</a> <a href="/blog/tags/加試/" style="font-size: 10px;">加試</a> <a href="/blog/tags/字神帝國/" style="font-size: 10px;">字神帝國</a> <a href="/blog/tags/惡意軟體/" style="font-size: 10px;">惡意軟體</a> <a href="/blog/tags/星期/" style="font-size: 10px;">星期</a> <a href="/blog/tags/曜日/" style="font-size: 10px;">曜日</a> <a href="/blog/tags/神話/" style="font-size: 10px;">神話</a> <a href="/blog/tags/行星/" style="font-size: 10px;">行星</a>
         </div>
     </div>
 
